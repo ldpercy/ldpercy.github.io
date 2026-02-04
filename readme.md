@@ -49,7 +49,7 @@ Experiments - HTML, CSS, SVG, JS etc
 https://ldpercy.github.io/experiment-html/
 
 * [css/colour](https://ldpercy.github.io/experiment-html/css/colour.html)
-* [css/colour-calc](https://ldpercy.github.io/experiment-html/css/colour-calc2.html)
+* [css/colour-calc](https://ldpercy.github.io/experiment-html/css/colour-calc.html)
 * [dom/transform](https://ldpercy.github.io/experiment-html/dom/transform.html)
 * [dom/transform3d](https://ldpercy.github.io/experiment-html/dom/transform3d.html)
 * [svg/polygon](https://ldpercy.github.io/experiment-html/svg/polygon/)
