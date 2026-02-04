@@ -46,13 +46,13 @@ Github Page:
 Experiments - HTML, CSS, SVG, JS etc
 ------------------------------------
 
-https://ldpercy.github.io/experiment-html/
+https://ldpercy.github.io/html-experiment/
 
-* [css/colour](https://ldpercy.github.io/experiment-html/css/colour.html)
-* [css/colour-calc](https://ldpercy.github.io/experiment-html/css/colour-calc.html)
-* [dom/transform](https://ldpercy.github.io/experiment-html/dom/transform.html)
-* [dom/transform3d](https://ldpercy.github.io/experiment-html/dom/transform3d.html)
-* [svg/polygon](https://ldpercy.github.io/experiment-html/svg/polygon/)
-* [svg/text/baseline](https://ldpercy.github.io/experiment-html/svg/text/baseline.svg)
+* [css/colour](https://ldpercy.github.io/html-experiment/css/colour.html)
+* [css/colour-calc](https://ldpercy.github.io/html-experiment/css/colour-calc.html)
+* [dom/transform](https://ldpercy.github.io/html-experiment/dom/transform.html)
+* [dom/transform3d](https://ldpercy.github.io/html-experiment/dom/transform3d.html)
+* [svg/polygon](https://ldpercy.github.io/html-experiment/svg/polygon/)
+* [svg/text/baseline](https://ldpercy.github.io/html-experiment/svg/text/baseline.svg)
 
 
