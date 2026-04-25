@@ -27,10 +27,10 @@ Year Clock
 
 <p align="middle">
 	<a href="https://ldpercy.github.io/year-clock/?theme=vintage&date=2006-05-25">
-	<img width="45%" src="https://github.com/ldpercy/year-clock/raw/main/wiki/image/vintage.svg" alt="Year clock example: vintage theme" title="?theme=vintage&date=2006-05-25"/>
+	<img width="45%" src="https://raw.githubusercontent.com/ldpercy/year-clock/main/[wiki]/image/vintage.svg" alt="Year clock example: vintage theme" title="?theme=vintage&date=2006-05-25"/>
 	</a>
 	<a href="https://ldpercy.github.io/year-clock/?theme=lightning&date=2006-05-25">
-	<img width="45%" src="https://github.com/ldpercy/year-clock/raw/main/wiki/image/lightning.svg" alt="Year clock example: lightning theme" title="?theme=lightning&date=2006-05-25"/>
+	<img width="45%" src="https://raw.githubusercontent.com/ldpercy/year-clock/main/[wiki]/image/lightning.svg" alt="Year clock example: lightning theme" title="?theme=lightning&date=2006-05-25"/>
 	</a>
 </p>
 
