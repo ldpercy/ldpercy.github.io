@@ -2,24 +2,6 @@ ldpercy's GitHub Pages page
 ===========================
 
 
-Screensaver
------------
-
-<p align="middle">
-	<img width="20%" src="https://github.com/ldpercy/screensaver/raw/main/favicon.svg" alt="Screensaver favicon" title="Screensaver favicon"/>
-</p>
-
-Experiments with CSS and SVG animation
-
-Live:
-[ldpercy.github.io/screensaver/](https://ldpercy.github.io/screensaver/)
-
-Github page:
-[github.com/ldpercy/screensaver/](https://github.com/ldpercy/screensaver/)
-
-
-
-
 
 Turtle
 ------
@@ -53,7 +35,6 @@ Year Clock
 </p>
 
 
-
 A clock-style 12 month calendar.
 
 Live:
@@ -62,6 +43,25 @@ Live:
 
 Github Page:
 [github.com/ldpercy/year-clock](https://github.com/ldpercy/year-clock)
+
+
+
+Screensaver
+-----------
+
+<p align="middle">
+	<img width="20%" src="https://github.com/ldpercy/screensaver/raw/main/favicon.svg" alt="Screensaver favicon" title="Screensaver favicon"/>
+</p>
+
+Experiments with CSS and SVG animation.
+
+Live:
+[ldpercy.github.io/screensaver/](https://ldpercy.github.io/screensaver/)
+
+Github page:
+[github.com/ldpercy/screensaver/](https://github.com/ldpercy/screensaver/)
+
+
 
 
 
