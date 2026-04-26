@@ -1,0 +1,75 @@
+/*
+**	index.css
+*/
+
+
+html {
+	--project-colour: lime;
+	--transition-duration: 0.5s;
+
+	--scheme-colour: oklab(from var(--project-colour) 0.80 a b / alpha);
+	--accent-colour: oklab(from var(--project-colour) 0.40 a b / alpha);
+
+
+	margin:0em;
+	padding:0em;
+	color: lab( from var(--scheme-colour) calc(sign(l - 70) * -100) 0 0 / 1);
+	accent-color: var(--accent-colour);
+
+	body {
+		margin:1em;
+		padding:1em;
+		border-radius:1em;
+		background-color: var(--scheme-colour);
+	}
+	font-size: 16px;
+	font-family: 'Noto sans', sans-serif;
+
+}
+
+
+
+html {
+	color-scheme: light;
+	accent-color: var(--accent);
+	background-color: var(--html-background);
+}
+
+
+html[data-colourscheme=light] {
+	color-scheme: light;
+	--scheme-colour: white;
+	--accent-colour: hsl(from var(--project-colour) h 50 50 );
+	--html-background: oklab(from var(--project-colour) 0.40 a b / alpha);
+}
+
+html[data-colourscheme=dark] {
+	color-scheme: dark;
+	--scheme-colour: #0a0a0a;
+	--accent-colour: hsl(from var(--project-colour) h s 85 );
+	--html-background: oklab(from var(--project-colour) 0.60 a b / alpha);
+}
+
+
+
+/*
+**
+*/
+
+
+
+main {
+	display:grid;
+	grid-template-columns: 1fr 1fr;
+
+	h2 { grid-column-start: span 2; }
+}
+
+@media (orientation: portrait) {
+	main {
+		grid-template-columns: 1fr;
+	}
+}
+
+img { height:5em; text-align:center; }
+
