@@ -7,10 +7,12 @@ Turtle
 ------
 
 <p align="middle">
-	<img width="20%" src="https://github.com/ldpercy/turtle/raw/main/page/turtle.svg" alt="Terry the turtle" title="Terry the turtle"/>
+	<a href="https://ldpercy.github.io/turtle/">
+		<img width="20%" src="https://github.com/ldpercy/turtle/raw/main/page/turtle.svg" alt="Terry the turtle" title="Terry the turtle"/>
+	</a>
 </p>
 
-An implementation of turtle graphics in JavaScript & SVG.
+An implementation of [turtle graphics](https://en.wikipedia.org/wiki/Turtle_graphics) in JavaScript & SVG.
 
 Live:
 [ldpercy.github.io/turtle/](https://ldpercy.github.io/turtle/)
