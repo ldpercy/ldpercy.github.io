@@ -55,7 +55,21 @@ html[data-colourscheme=dark] {
 /*
 **
 */
+header {
+	h1 {
+		font-family: monospace;
+		text-align: center;
+		font-size: 5ex;
+	}
 
+	a {
+		text-decoration-line: none;
+		&:hover {
+			color: var(--accent-colour);
+			text-decoration-line: underline;
+		}
+	}
+}
 
 
 main {
