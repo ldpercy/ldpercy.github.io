@@ -1,15 +1,32 @@
 /*
 **	index.css
 */
+@import "./[html-common]/style/html-common.css";
+
+
+
+:root {
+	--project-colour: limegreen;
+	/* --project-accent: hsl(from var(--project-colour) calc(h + 74.00) s l / alpha); */
+	/* --project-accent: rgb(from var(--project-colour) 255 g b / alpha); */
+	--project-accent: lch(from var(--project-colour) l c calc(h + 300.00) / alpha);
+}
+
+
+
 
 
 html {
-	--project-colour: lime;
+
 	--transition-duration: 0.5s;
 
-	--scheme-colour: oklab(from var(--project-colour) 0.80 a b / alpha);
-	--accent-colour: oklab(from var(--project-colour) 0.40 a b / alpha);
 
+	* {
+		transition: all ease-in var(--transition-duration);
+	}
+
+	--scheme-colour: oklab(from var(--project-colour) 0.80 a b / alpha);
+	--accent-colour: hsl(from var(--project-accent) h s 40 );
 
 	margin:0em;
 	padding:0em;
@@ -39,15 +56,15 @@ html {
 html[data-colourscheme=light] {
 	color-scheme: light;
 	--scheme-colour: white;
-	--accent-colour: hsl(from var(--project-colour) h 50 50 );
-	--html-background: oklab(from var(--project-colour) 0.40 a b / alpha);
+	--accent-colour:   hsl(from var(--project-accent) h s 40 );
+	--html-background: hsl(from var(--project-colour) h s 90 / alpha);
 }
 
 html[data-colourscheme=dark] {
 	color-scheme: dark;
 	--scheme-colour: #0a0a0a;
-	--accent-colour: hsl(from var(--project-colour) h s 85 );
-	--html-background: oklab(from var(--project-colour) 0.60 a b / alpha);
+	--accent-colour:   hsl(from var(--project-accent) h s 60 );
+	--html-background: hsl(from var(--project-colour) h s 10 / alpha);
 }
 
 
@@ -56,18 +73,39 @@ html[data-colourscheme=dark] {
 **
 */
 header {
-	h1 {
-		font-family: monospace;
-		text-align: center;
-		font-size: 5ex;
+	padding:1em;
+	background-color: hsl(from var(--scheme-colour) h s l / 0.9);
+	border-bottom: 2px solid var(--html-background);
+
+	h1::before {
+		content: none;
+		/* content: url("./favicon.svg"); */
 	}
 
-	a {
-		text-decoration-line: none;
-		&:hover {
-			color: var(--accent-colour);
-			text-decoration-line: underline;
+	h1 {
+		font-family: monospace;
+		/* text-align: center; */
+		font-size: 5ex;
+	}
+	.project-icon {
+		img {
+			display: inline-block;
+			height:1.2ex;
+			width:1.2ex;
 		}
+
+		img:hover {
+			filter: drop-shadow(0px 0px 5px var(--accent-colour));
+		}
+	}
+}
+
+
+a {
+	text-decoration-line: none;
+	&:hover {
+		color: var(--accent-colour);
+		text-decoration-line: underline;
 	}
 }
 
