@@ -1,0 +1,109 @@
+/*
+**	index.css
+*/
+@import "./[html-common]/style/html-common.css";
+@import "./style/header.css";
+@import "./style/article.css";
+
+
+:root {
+	--project-colour: limegreen;
+	--project-accent: lch(from var(--project-colour) l c calc(h + 300.00) / alpha);
+	--project-link-colour: lch(from var(--project-colour) l c calc(h + 120.00) / alpha);
+}
+
+
+@property --project-base-length {
+	syntax: "<length>";
+	inherits: true;
+	initial-value: 8px;
+}
+
+
+html {
+
+	--transition-duration: 0.5s;
+
+	font-size: calc(2 * var(--project-base-length));
+	font-family: sans-serif;
+
+	* {
+		transition: all ease-in var(--transition-duration);
+	}
+
+	--scheme-colour: oklab(from var(--project-colour) 0.80 a b / alpha);
+	--accent-colour: hsl(from var(--project-accent) h s 40 );
+
+	margin:0em;
+	padding:0em;
+	color: lab( from var(--scheme-colour) calc(sign(l - 70) * -100) 0 0 / 1);
+	accent-color: var(--accent-colour);
+
+	body {
+		margin:1em;
+		padding:1em;
+		border-radius:1em;
+		background-color: var(--scheme-colour);
+	}
+
+
+
+}
+
+
+
+html {
+	color-scheme: light;
+	accent-color: var(--accent);
+	background-color: var(--html-background);
+}
+
+
+html[data-colourscheme=light] {
+	color-scheme: light;
+	--scheme-colour: white;
+	--accent-colour:   hsl(from var(--project-accent) h s 40 );
+	--html-background: hsl(from var(--project-colour) h s 90 / alpha);
+
+	--link-colour:   hsl(from var(--project-link-colour) h s 20 );
+}
+
+html[data-colourscheme=dark] {
+	color-scheme: dark;
+	--scheme-colour: #0a0a0a;
+	--accent-colour:   hsl(from var(--project-accent) h s 60 );
+	--html-background: hsl(from var(--project-colour) h s 10 / alpha);
+
+	--link-colour:   hsl(from var(--project-link-colour) h s 80 );
+
+}
+
+
+
+
+
+a {
+	text-decoration-line: none;
+	color: var(--link-colour);
+	&:hover {
+		color: var(--accent-colour);
+		text-decoration-line: underline;
+	}
+}
+
+
+main {
+	display:grid;
+	grid-template-columns: 1fr 1fr;
+
+	h2 { grid-column-start: span 2; }
+}
+
+@media (orientation: portrait) {
+	main {
+		grid-template-columns: 1fr;
+	}
+}
+
+
+
