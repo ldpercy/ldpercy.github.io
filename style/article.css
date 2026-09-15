@@ -1,12 +1,25 @@
+/*
+**	article.css
+*/
+
+
 article {
 
-	/* h2 {  } */
-
-	img {
-		height: calc(4 * var(--project-base-length));
+	h2 img {
+		height: calc(5 * var(--project-base-length));
 		text-align:center;
 		float:right;
 	}
 
+	.body {
+		display:grid;
+		grid-template-columns: 1fr 1fr;
+
+
+		img {
+			height: calc(20 * var(--project-base-length));
+			text-align: end;
+		}
+	}
 
 }

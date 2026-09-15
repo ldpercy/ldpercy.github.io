@@ -25,7 +25,7 @@ header {
 		font-size: inherit;
 		img {
 			width: var(--font-size);
-			vertical-align: middle;
+			vertical-align: sub;
 		}
 		img:hover {
 			filter: drop-shadow(0px 0px var(--project-base-length) var(--accent-colour));
