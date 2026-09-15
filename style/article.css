@@ -1,0 +1,12 @@
+article {
+
+	/* h2 {  } */
+
+	img {
+		height: calc(4 * var(--project-base-length));
+		text-align:center;
+		float:right;
+	}
+
+
+}

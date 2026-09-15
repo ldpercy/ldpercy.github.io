@@ -2,24 +2,30 @@
 **	index.css
 */
 @import "./[html-common]/style/html-common.css";
-
+@import "./style/header.css";
+@import "./style/article.css";
 
 
 :root {
 	--project-colour: limegreen;
-	/* --project-accent: hsl(from var(--project-colour) calc(h + 74.00) s l / alpha); */
-	/* --project-accent: rgb(from var(--project-colour) 255 g b / alpha); */
 	--project-accent: lch(from var(--project-colour) l c calc(h + 300.00) / alpha);
+	--project-link-colour: lch(from var(--project-colour) l c calc(h + 120.00) / alpha);
 }
 
 
-
+@property --project-base-length {
+	syntax: "<length>";
+	inherits: true;
+	initial-value: 8px;
+}
 
 
 html {
 
 	--transition-duration: 0.5s;
 
+	font-size: calc(2 * var(--project-base-length));
+	font-family: sans-serif;
 
 	* {
 		transition: all ease-in var(--transition-duration);
@@ -39,8 +45,8 @@ html {
 		border-radius:1em;
 		background-color: var(--scheme-colour);
 	}
-	font-size: 16px;
-	font-family: 'Noto sans', sans-serif;
+
+
 
 }
 
@@ -58,6 +64,8 @@ html[data-colourscheme=light] {
 	--scheme-colour: white;
 	--accent-colour:   hsl(from var(--project-accent) h s 40 );
 	--html-background: hsl(from var(--project-colour) h s 90 / alpha);
+
+	--link-colour:   hsl(from var(--project-link-colour) h s 20 );
 }
 
 html[data-colourscheme=dark] {
@@ -65,44 +73,18 @@ html[data-colourscheme=dark] {
 	--scheme-colour: #0a0a0a;
 	--accent-colour:   hsl(from var(--project-accent) h s 60 );
 	--html-background: hsl(from var(--project-colour) h s 10 / alpha);
+
+	--link-colour:   hsl(from var(--project-link-colour) h s 80 );
+
 }
 
 
 
-/*
-**
-*/
-header {
-	padding:1em;
-	background-color: hsl(from var(--scheme-colour) h s l / 0.9);
-	border-bottom: 2px solid var(--html-background);
-
-	h1::before {
-		content: none;
-		/* content: url("./favicon.svg"); */
-	}
-
-	h1 {
-		font-family: monospace;
-		/* text-align: center; */
-		font-size: 5ex;
-	}
-	.project-icon {
-		img {
-			display: inline-block;
-			height:1.2ex;
-			width:1.2ex;
-		}
-
-		img:hover {
-			filter: drop-shadow(0px 0px 5px var(--accent-colour));
-		}
-	}
-}
 
 
 a {
 	text-decoration-line: none;
+	color: var(--link-colour);
 	&:hover {
 		color: var(--accent-colour);
 		text-decoration-line: underline;
@@ -123,5 +105,5 @@ main {
 	}
 }
 
-img { height:5em; text-align:center; }
+
 
