@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-320 -320 640 640" preserveAspectRatio="xMidYMid meet">
+	<title>turtle drawing</title>
+	<style>
+		path {
+			fill:grey;
+		}
+	</style>
+
+	<!--
+		// command set 1
+		right 120,114.2
+		left 90,114.2
+
+		// command set 2
+		~xy 0,312
+		right 30,0
+	-->
+
+
+	<path d="
+
+		M 0,-312
+		57,-213
+		156,-270
+		156,-156
+		270,-156
+		213,-57
+		312,0
+		213,57
+		270,156
+		156,156
+		156,270
+		57,213
+
+		0,312
+		-57,213
+		-156,270
+		-156,156
+		-270,156
+		-213,57
+		-312,0
+		-213,-57
+		-270,-156
+		-156,-156
+		-156,-270
+		-57,-213
+
+	"/>
+
+
+
+
+</svg>
