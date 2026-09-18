@@ -93,10 +93,12 @@ a {
 
 
 main {
+	margin:0px;
 	display:grid;
 	grid-template-columns: 1fr 1fr;
 
 	h2 { grid-column-start: span 2; }
+
 }
 
 @media (orientation: portrait) {

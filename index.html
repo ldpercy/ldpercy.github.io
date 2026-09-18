@@ -5,9 +5,9 @@
 	<meta charset="utf-8">
 	<link rel="icon" href="./favicon.svg">
 	<link rel="stylesheet" href="./index.css">
-
-	<script type="module" src="./[html-common]/script/colourScheme-selector.js"></script>
-
+	<script type="module" src="./index.js"></script>
+	<meta name="color-scheme" content="light dark">
+	<meta name="theme-color" content="" id="meta-themeColor"/>
 </head>
 <body>
 	<header>
@@ -15,8 +15,14 @@
 			<a href="https://ldpercy.github.io/">ldpercy.github.io</a>
 		</h1>
 		<nav>
+			<a id="colourScheme-toggle" class="colourScheme-selector" href="?colourScheme=toggle" title="Toggle colour scheme" data-colourscheme="toggle">
+				<svg id="colourScheme-svg" viewBox="-320 -320 640 640" preserveAspectRatio="xMidYMid meet"><path /></svg>
+			</a>
+
+			<!--
 			<a class="colourScheme-selector" href="?colourScheme=light" title="Light colour scheme" data-colourscheme="light">🟓</a>
 			<a class="colourScheme-selector" href="?colourScheme=dark" title="Dark colour scheme" data-colourscheme="dark">🟒</a>
+			-->
 
 			<a href="https://github.com/ldpercy/" title="https://github.com/ldpercy/">
 				<img src="./favicon.svg" alt="github.com/ldpercy" title="github.com/ldpercy"/>
@@ -27,7 +33,7 @@
 
 		<article>
 			<h2>
-				<img src="image/turtle.svg" alt="Terry the turtle" title="Terry the turtle"/>
+				<img src="image/turtle-favicon.svg" alt="Terry the turtle" title="Terry the turtle"/>
 				Turtle
 			</h2>
 
@@ -47,7 +53,9 @@
 				</ul>
 			</div>
 			<div>
-				<img src="./image/turtle-screenshot-1.png">
+				<a class="pic-link" href="https://ldpercy.github.io/turtle/">
+					<img src="./image/turtle-screenshot-1.png">
+				</a>
 			</div>
 
 		</article>
@@ -55,7 +63,7 @@
 
 		<article>
 			<h2>
-				<img src="image/yearclock.svg" alt="Year clock" title="Year clock"/>
+				<img src="image/yearclock-favicon.svg" alt="Year clock" title="Year clock"/>
 				Year Clock
 			</h2>
 
@@ -75,10 +83,10 @@
 					</ul>
 				</div>
 				<div>
-					<a href="https://ldpercy.github.io/year-clock/?theme=vintage&date=2006-05-25">
+					<a class="pic-link" href="https://ldpercy.github.io/year-clock/?theme=vintage&date=2006-05-25">
 						<img width="45%" src="image/yearclock-vintage.svg" alt="Year clock example: vintage theme" title="?theme=vintage&date=2006-05-25"/>
 					</a>
-					<a href="https://ldpercy.github.io/year-clock/?theme=lightning&date=2006-05-25">
+					<a class="pic-link" href="https://ldpercy.github.io/year-clock/?theme=lightning&date=2006-05-25">
 						<img width="45%" src="image/yearclock-lightning.svg" alt="Year clock example: lightning theme" title="?theme=lightning&date=2006-05-25"/>
 					</a>
 				</div>
@@ -88,7 +96,7 @@
 
 		<article>
 			<h2>
-				<img src="image/screensaver.svg" alt="Screensaver favicon" title="Screensaver"/>
+				<img src="image/screensaver-favicon.svg" alt="Screensaver favicon" title="Screensaver"/>
 				Screensaver
 			</h2>
 
@@ -107,7 +115,9 @@
 					</ul>
 				</div>
 				<div>
-					<img src="./image/screensaver-screenshot-1.png">
+					<a class="pic-link" href="https://ldpercy.github.io/screensaver/">
+						<img src="./image/screensaver-screenshot-1.png">
+					</a>
 				</div>
 			</div>
 
@@ -115,7 +125,7 @@
 
 		<article>
 			<h2>
-				<img src="image/html-experiment.svg" alt="Screensaver favicon" title="html-experiment"/>
+				<img src="image/html-experiment-favicon.svg" alt="html-experiment favicon" title="html-experiment"/>
 				Experiments - HTML, CSS, SVG, JS etc
 			</h2>
 

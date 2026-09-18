@@ -5,6 +5,8 @@
 
 article {
 
+	margin: calc(2 * var(--project-base-length));
+
 	h2 img {
 		height: calc(5 * var(--project-base-length));
 		text-align:center;
@@ -21,5 +23,14 @@ article {
 			text-align: end;
 		}
 	}
+
+
+	.pic-link {
+		&:hover {
+			filter: drop-shadow(0px 0px var(--project-base-length) var(--accent-colour));
+			/* outline: 1px solid var(--accent-colour); */
+		}
+	}
+
 
 }
