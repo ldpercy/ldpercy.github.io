@@ -10,6 +10,7 @@ header {
 	font-size: var(--font-size);
 
 	padding-block:0em;
+	padding-inline: calc(3 * var(--project-base-length));
 
 	background-color: hsl(from var(--scheme-colour) h s l / 0.9);
 	border-bottom: 2px solid var(--html-background);
@@ -43,6 +44,7 @@ header {
 
 	#colourScheme-toggle {
 		text-decoration: none;
+		margin-inline: calc(1 * var(--project-base-length));
 	}
 
 	#colourScheme-svg {

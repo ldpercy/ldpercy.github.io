@@ -5,6 +5,8 @@
 
 article {
 
+	margin: calc(2 * var(--project-base-length));
+
 	h2 img {
 		height: calc(5 * var(--project-base-length));
 		text-align:center;
