@@ -1,14 +1,16 @@
-ldpercy's GitHub Pages page
-===========================
+ldpercy.github.io
+=================
 
 
 
-Turtle
-------
+Projects
+--------
+
+### Turtle
 
 <p align="middle">
 	<a href="https://ldpercy.github.io/turtle/">
-		<img width="20%" src="https://github.com/ldpercy/turtle/raw/main/page/turtle.svg" alt="Terry the turtle" title="Terry the turtle"/>
+		<img width="20%" src="./image/turtle-favicon.svg" alt="Terry the turtle" title="Terry the turtle"/>
 	</a>
 </p>
 
@@ -24,15 +26,15 @@ Github page:
 
 
 
-Year Clock
-----------
+### Year Clock
+
 
 <p align="middle">
 	<a href="https://ldpercy.github.io/year-clock/?theme=vintage&date=2006-05-25">
-	<img width="45%" src="https://raw.githubusercontent.com/ldpercy/year-clock/main/[wiki]/image/vintage.svg" alt="Year clock example: vintage theme" title="?theme=vintage&date=2006-05-25"/>
+	<img width="45%" src="./image/yearclock-vintage.svg" alt="Year clock example: vintage theme" title="?theme=vintage&date=2006-05-25"/>
 	</a>
 	<a href="https://ldpercy.github.io/year-clock/?theme=lightning&date=2006-05-25">
-	<img width="45%" src="https://raw.githubusercontent.com/ldpercy/year-clock/main/[wiki]/image/lightning.svg" alt="Year clock example: lightning theme" title="?theme=lightning&date=2006-05-25"/>
+	<img width="45%" src="./image/yearclock-lightning.svg" alt="Year clock example: lightning theme" title="?theme=lightning&date=2006-05-25"/>
 	</a>
 </p>
 
@@ -48,11 +50,11 @@ Github Page:
 
 
 
-Screensaver
------------
+### Screensaver
+
 
 <p align="middle">
-	<img width="20%" src="https://github.com/ldpercy/screensaver/raw/main/favicon.svg" alt="Screensaver favicon" title="Screensaver favicon"/>
+	<img width="20%" src="./image/screensaver-favicon.svg" alt="Screensaver favicon" title="Screensaver favicon"/>
 </p>
 
 Experiments with CSS and SVG animation.
@@ -70,8 +72,7 @@ Github page:
 
 
 
-Experiments - HTML, CSS, SVG, JS etc
-------------------------------------
+### Experiments - HTML, CSS, SVG, JS etc
 
 https://ldpercy.github.io/html-experiment/
 
