@@ -16,12 +16,27 @@ a {
 
 li {
 	list-style-type: triangle;
+	/* list-style-image: linear-gradient(to left bottom, red, blue); */
+	/* list-style-image: url("./list-image.svg"); */
+
+	&::marker {
+		font-size: 0.75em;
+	}
+
 }
+
+
+@counter-style hexagon {
+	system: cyclic;
+	symbols: "⌬";
+	suffix: " ";
+}
+
 
 
 @counter-style triangle {
 	system: cyclic;
-	symbols: "🛆";
+	symbols: "🛆"; /* 🛆 */
 	suffix: " ";
 }
 

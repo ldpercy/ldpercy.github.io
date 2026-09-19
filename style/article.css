@@ -41,3 +41,12 @@ article {
 
 
 }
+
+
+project-card {
+	img {
+		text-align:center;
+		float:right;
+		height: calc(5 * var(--project-base-length));
+	}
+}
