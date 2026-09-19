@@ -1,7 +1,10 @@
 /*
 **	index.css
 */
+
 @import "./[html-common]/style/html-common.css";
+
+@import "./style/text.css";
 @import "./style/header.css";
 @import "./style/article.css";
 
@@ -80,16 +83,6 @@ html[data-colourscheme=dark] {
 
 
 
-
-
-a {
-	text-decoration-line: none;
-	color: var(--link-colour);
-	&:hover {
-		color: var(--accent-colour);
-		text-decoration-line: underline;
-	}
-}
 
 
 main {

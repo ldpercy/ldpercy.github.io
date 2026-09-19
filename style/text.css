@@ -1,0 +1,29 @@
+/*
+**	text.css
+*/
+
+
+
+
+a {
+	text-decoration-line: none;
+	color: var(--link-colour);
+	&:hover {
+		color: var(--accent-colour);
+		text-decoration-line: underline;
+	}
+}
+
+li {
+	list-style-type: triangle;
+}
+
+
+@counter-style triangle {
+	system: cyclic;
+	symbols: "🛆";
+	suffix: " ";
+}
+
+
+
