@@ -14,13 +14,15 @@ a {
 	}
 }
 
+
 li {
-	list-style-type: triangle;
+	list-style-type: diamond;
 	/* list-style-image: linear-gradient(to left bottom, red, blue); */
 	/* list-style-image: url("./list-image.svg"); */
 
 	&::marker {
-		font-size: 0.75em;
+		/* font-size: 0.75em; */
+		font-weight:bold;
 	}
 
 }
@@ -39,6 +41,15 @@ li {
 	symbols: "🛆"; /* 🛆 */
 	suffix: " ";
 }
+
+
+
+@counter-style diamond {
+	system: cyclic;
+	symbols: "⋄"; /* ◇⟡♦◆🮮🞛🞜⟐ */
+	suffix: " ";
+}
+
 
 
 

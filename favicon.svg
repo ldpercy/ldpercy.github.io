@@ -15,12 +15,11 @@
 		}
 		.green {
 			fill:lime;
-			fill-opacity: 1;
 		}
 		.silver {
 			fill:silver;
 		}
-		.blad-body { fill:black; }
+		.blad-body { fill:#111; }
 		.blad-face { fill:#9a9; }
 
 		.ldpe-body { fill:darkgreen }
@@ -46,7 +45,7 @@
 		<path class="ldpe-face" d="M -9,-26 7,-27 5,-10 -6,-10 z"/>
 	</g>
 
-	<path class="hands" d="M -15,20 16,17 6,26 -12,26 Z"/>
+	<path class="hands" d="M -15,20 16,17 6,26 -10,28 Z"/>
 	<path class="green" d="M 3,-9 23,18 -25,19 z"/>
 	<path class="silver" d="M -7,26 15,27 16,32 -8,32 "/>
 
