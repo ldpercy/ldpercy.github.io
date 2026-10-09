@@ -1,0 +1,55 @@
+/*
+**	text.css
+*/
+
+
+
+
+a {
+	text-decoration-line: none;
+	color: var(--link-colour);
+	&:hover {
+		color: var(--accent-colour);
+		text-decoration-line: underline;
+	}
+}
+
+
+li {
+	list-style-type: diamond;
+	/* list-style-image: linear-gradient(to left bottom, red, blue); */
+	/* list-style-image: url("./list-image.svg"); */
+
+	&::marker {
+		/* font-size: 0.75em; */
+		font-weight:bold;
+	}
+
+}
+
+
+@counter-style hexagon {
+	system: cyclic;
+	symbols: "⌬";
+	suffix: " ";
+}
+
+
+
+@counter-style triangle {
+	system: cyclic;
+	symbols: "🛆"; /* 🛆 */
+	suffix: " ";
+}
+
+
+
+@counter-style diamond {
+	system: cyclic;
+	symbols: "⋄"; /* ◇⟡♦◆🮮🞛🞜⟐ */
+	suffix: " ";
+}
+
+
+
+

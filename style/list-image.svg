@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-32 -32 64 64" preserveAspectRatio="xMidYMid meet">
+	<title>turtle drawing</title>
+	<style>
+		path {
+			/* fill:green;
+			stroke: green; */
+			stroke-width:20;
+			stroke-linejoin: round;
+		}
+
+		@media (prefers-color-scheme: light)	{
+			path {
+				fill: black;
+				stroke: black;
+			}
+		}
+		@media (prefers-color-scheme: dark)		{
+			path {
+				fill: white;
+				stroke: white;
+			}
+		}
+	</style>
+
+	<path d="
+		M
+		0,-16
+		+20,16
+		-20,16
+		z
+	"/>
+
+</svg>

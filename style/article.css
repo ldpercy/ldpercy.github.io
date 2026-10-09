@@ -5,7 +5,20 @@
 
 article {
 
+	/* border-width: 16px;
+	border-image-slice: 16;
+
+	border-image-source: url('./list-image.svg');
+	border-image-outset: 8px;
+	border-image-repeat:  space;
+	border-image-width: 16px; */
+
+
+
 	margin: calc(2 * var(--project-base-length));
+
+
+
 
 	h2 img {
 		height: calc(5 * var(--project-base-length));
@@ -26,11 +39,25 @@ article {
 
 
 	.pic-link {
+		filter: drop-shadow(0px 0px 0px var(--accent-colour));	/* chrome seems to need this? */
 		&:hover {
 			filter: drop-shadow(0px 0px var(--project-base-length) var(--accent-colour));
 			/* outline: 1px solid var(--accent-colour); */
 		}
 	}
 
+	.image {
+		text-align: center;
+	}
 
+
+}
+
+
+project-card {
+	img {
+		text-align:center;
+		float:right;
+		height: calc(5 * var(--project-base-length));
+	}
 }
