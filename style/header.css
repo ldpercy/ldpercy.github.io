@@ -51,6 +51,7 @@ header {
 	}
 
 	#colourScheme-svg {
+
 		width: var(--font-size);
 		height: var(--font-size);
 		vertical-align: sub;
@@ -83,6 +84,7 @@ header {
 
 
 html[data-colourscheme=light] {
+
 	#colourScheme-svg path {
 		d: var(--svg-path-light);
 	}
@@ -92,6 +94,7 @@ html[data-colourscheme=light] {
 }
 
 html[data-colourscheme=dark] {
+
 	#colourScheme-svg path {
 		d: var(--svg-path-dark);
 	}

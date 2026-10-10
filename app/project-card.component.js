@@ -17,18 +17,26 @@ export class ProjectCard extends HTMLElement {
 		this.attachShadow({ mode: "open" });
 		this.shadowRoot.innerHTML = `
 			<style>
-				[]project-icon { width:2em; }
+				.project-icon { width:2em; }
+				h3 { margin-top:0em; }
+				.project-body {
+					display:grid;
+					grid-template-columns: 1fr 1fr;
+
+					// img {
+					// 	height: calc(20 * var(--project-base-length));
+					// 	text-align: end;
+					// }
+				}
 			</style>
 			<article>
-				<h2>
+				<h3>
 					<slot name="project-icon">project-icon</slot>
 					<slot name="project-name">project-name</slot>
-				</h2>
+				</h3>
 
-				<div class="text">
+				<div class="project-body">
 					<slot name="project-text">project-text</slot>
-				</div>
-				<div class="image">
 					<slot name="project-image">project-image</slot>
 				</div>
 			</article>
