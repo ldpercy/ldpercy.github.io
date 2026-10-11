@@ -67,7 +67,6 @@ project-card {
 	border: 1px dotted var(--bg-colour);
 
 
-
 	[slot='project-icon'] {
 		text-align:center;
 		float:right;
@@ -79,6 +78,11 @@ project-card {
 		text-align:center;
 		img {
 			height: calc(20 * var(--project-base-length));
+			filter: drop-shadow(0px 0px 0px var(--accent-colour));	/* chrome seems to need this? */
+			&:hover {
+				filter: drop-shadow(0px 0px var(--project-base-length) var(--accent-colour));
+				/* outline: 1px solid var(--accent-colour); */
+			}
 		}
 	}
 

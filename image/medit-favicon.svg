@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-32 -32 64 64">
+
+	<style>
+		:root {
+			--project-colour: mediumturquoise;
+		}
+		rect {
+			fill-opacity: 60%;
+		}
+		text {
+			text-anchor: middle;
+			dominant-baseline: middle;
+			font-size:58px;
+			transform:scaleX(-1) rotate(30deg);
+			fill:black;
+		}
+		@media (prefers-color-scheme: light)	{
+			rect { fill: oklch(from var(--project-colour) 0.80 c h / alpha); }
+			text { fill: black; }
+		}
+		@media (prefers-color-scheme: dark)		{
+			rect { fill: oklch(from var(--project-colour) 0.20 c h / alpha); }
+			text { fill: white; }
+		}
+
+	</style>
+
+	<rect x="-32" y="-32" width="64" height="64"/>
+	<text>🖎</text>
+
+</svg>

@@ -28,18 +28,43 @@ export class ProjectCard extends HTMLElement {
 					// 	text-align: end;
 					// }
 				}
-			</style>
-			<article>
-				<h3>
-					<slot name="project-icon">project-icon</slot>
-					<slot name="project-name">project-name</slot>
-				</h3>
+				dl {
+					display:grid;
+					grid-template-columns: 1fr 2fr;
+					dt:before {
+						content: '⋄ ';
+					}
+				}
 
-				<div class="project-body">
-					<slot name="project-text">project-text</slot>
+
+			</style>
+
+			<h3>
+				<slot name="project-icon">project-icon</slot>
+				<slot name="project-name">project-name</slot>
+			</h3>
+
+			<div class="project-body">
+				<div>
+					<slot name="description">
+						project description
+					</slot>
+					<dl>
+						<dt>Repository</dt>
+						<dd><slot name="repo"></dd>
+						<dt>Site</dt>
+						<dd><slot name="site"></dd>
+						<dt>Status</dt>
+						<dd><slot name="status"></dd>
+						<dt>Technology</dt>
+						<dd><slot name="technology"></dd>
+					</dl>
+				</div>
+				<div>
 					<slot name="project-image">project-image</slot>
 				</div>
-			</article>
+			</div>
+
 		`;
 		// something is enforcing a min-width...
 
