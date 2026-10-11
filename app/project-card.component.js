@@ -35,7 +35,12 @@ export class ProjectCard extends HTMLElement {
 						content: '⋄ ';
 					}
 				}
-
+				@media (max-width: 900px) {
+					dl {
+						grid-template-columns: 1fr;
+					}
+					dt:after { content:':'; }
+				}
 
 			</style>
 
