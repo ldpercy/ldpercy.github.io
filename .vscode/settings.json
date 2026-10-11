@@ -25,7 +25,8 @@
 		"statusBar.debuggingBackground": "#32cd32",
 		"statusBar.debuggingForeground": "#15202b",
 		"activityBar.activeBorder": "#15202b",
-		"activityBarTop.activeBorder": "#15202b"
+		"activityBarTop.activeBorder": "#15202b",
+		"statusBar.inactiveBackground": "#32cd32"
 	},
 	"peacock.color": "limegreen"
 }

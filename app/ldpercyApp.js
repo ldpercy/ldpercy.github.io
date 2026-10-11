@@ -12,7 +12,7 @@ import { controller} from './controller.js';
 class LdpercyApp extends HTMLApp {
 
 	appName			= 'ldpercy';
-	appVersion		= 'v0.2.0';
+	appVersion		= 'v0.4.0';
 	projectColour	= 'limegreen';
 	appInfo = [`%c
 		ldpercy.github.io ${this.appVersion} by ldpercy

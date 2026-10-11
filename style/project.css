@@ -15,7 +15,7 @@ article {
 
 
 
-	margin: calc(2 * var(--project-base-length));
+	margin: 1em;
 
 
 
@@ -54,10 +54,47 @@ article {
 }
 
 
+
+
+
 project-card {
-	img {
+	margin:1em;
+	--bg-colour: #8881;
+	background-color: var(--bg-colour);
+
+	border-radius:0em;
+
+	border: 1px dotted var(--bg-colour);
+
+
+	[slot='project-icon'] {
 		text-align:center;
 		float:right;
-		height: calc(5 * var(--project-base-length));
+		width:2em;
 	}
+
+
+	[slot='project-image'] {
+		text-align:center;
+		img {
+			height: calc(20 * var(--project-base-length));
+			filter: drop-shadow(0px 0px 0px var(--accent-colour));	/* chrome seems to need this? */
+			&:hover {
+				filter: drop-shadow(0px 0px var(--project-base-length) var(--accent-colour));
+				/* outline: 1px solid var(--accent-colour); */
+			}
+		}
+	}
+
+
+	/* background:
+		linear-gradient(
+			135deg,
+			var(--bg-colour) 0%,
+			transparent calc(0% + 1em),
+			transparent calc(100% - 1em) ,
+			var(--bg-colour) 100%
+		); */
+
+
 }
