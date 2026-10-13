@@ -23,4 +23,24 @@ This will also help getting (at least some of) the magic strings out the code.
 *Some* things like index.html's head title and meta desc i might keep manually updating for now, will consider substitution options for those later.
 
 
+package.json
+------------
+This will end up kind of similar to node's `package.json`.
+Will keep `project.json` to make it clear they're not the same, but check in from time to time to compare.
+
+
+Paths
+-----
+The paths used for projects will be different for local dev and when deployed.
+
+eg local:
+	localhost/ldpercy.github.io/
+	localhost/turtle/
+	localhost/medit/
+
+vs live:
+
+	ldpercy.github.io/
+	ldpercy.github.io/turtle/
+	ldpercy.github.io/medit/
 
