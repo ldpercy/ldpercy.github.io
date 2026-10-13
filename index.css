@@ -2,11 +2,16 @@
 **	index.css
 */
 
-@import "./[html-common]/style/html-common.css";
+/* @import "./[html-common]/style/html-common.css"; */
+	@import "./[html-common]/style/page/html.css";
+	@import "./[html-common]/style/page/header.css";
 
-@import "./style/text.css";
+
+
 @import "./style/header.css";
+@import "./style/main.css";
 @import "./style/project.css";
+@import "./style/text.css";
 
 
 :root {
@@ -36,6 +41,13 @@ html {
 
 	--scheme-colour: oklab(from var(--project-colour) 0.80 a b / alpha);
 	--accent-colour: hsl(from var(--project-accent) h s 40 );
+
+
+	meta[name=theme-color] {
+		/* trying a little hack here - this element has no display, but it can be used to compute the colour change as it has no transition */
+		transition: none;
+		color: var(--scheme-colour);
+	}
 
 	margin:0em;
 	padding:0em;
@@ -89,24 +101,6 @@ html[data-colourscheme=dark] {
 
 }
 
-
-
-
-
-main {
-	margin:0px;
-	display:grid;
-	grid-template-columns: 1fr 1fr;
-
-	h2 { grid-column-start: span 2; }
-
-}
-
-@media (orientation: portrait) {
-	main {
-		grid-template-columns: 1fr;
-	}
-}
 
 
 

@@ -38,8 +38,9 @@ export class ProjectCard extends HTMLElement {
 				@media (max-width: 900px) {
 					dl {
 						grid-template-columns: 1fr;
+						dt:before { content:''; }
+						dt:after { content:':'; }
 					}
-					dt:after { content:':'; }
 				}
 
 			</style>

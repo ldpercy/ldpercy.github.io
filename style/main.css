@@ -1,0 +1,22 @@
+/*
+**	main.css
+*/
+
+
+main {
+	margin:0px;
+	display:grid;
+	grid-template-columns: 1fr ;
+
+	h2 { grid-column-start: span 2; }
+
+}
+
+@media (min-width: 2000px) {
+	main {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+
+

@@ -59,6 +59,7 @@ article {
 
 project-card {
 	margin:1em;
+	padding:1em;
 	--bg-colour: #8881;
 	background-color: var(--bg-colour);
 
