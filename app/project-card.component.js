@@ -4,7 +4,7 @@
 
 
 export class ProjectCard extends HTMLElement {
-	static observedAttributes = ["colour"];
+	static observedAttributes = ['project-name'];
 
 
 	/** @type {HTMLInputElement} */ colorInput;
@@ -14,7 +14,7 @@ export class ProjectCard extends HTMLElement {
 	constructor() {
 		super();				// Always call super first in constructor
 
-		this.attachShadow({ mode: "open" });
+		this.attachShadow({ mode: 'open' });
 		this.shadowRoot.innerHTML = `
 			<style>
 				.project-icon { width:2em; }
@@ -80,60 +80,60 @@ export class ProjectCard extends HTMLElement {
 		//console.log('shadowRoot', this.shadowRoot);
 
 
-		this.shadowRoot.querySelectorAll('input').forEach(
-			(element) => {
-				element.addEventListener(
-					'change',
-					(event) => {
-						const eventTarget = /** @type {HTMLInputElement} */ (event.target);
-						this.internalUpdate(eventTarget.value);
-					}
-				);
-			}
-		);
+		// this.shadowRoot.querySelectorAll('input').forEach(
+		// 	(element) => {
+		// 		element.addEventListener(
+		// 			'change',
+		// 			(event) => {
+		// 				const eventTarget = /** @type {HTMLInputElement} */ (event.target);
+		// 				this.internalUpdate(eventTarget.value);
+		// 			}
+		// 		);
+		// 	}
+		// );
 
 	}/* constructor */
 
 
 	connectedCallback() {
-		//console.log("Custom element added to page.");
+		console.log(`Project card added: ${this.attributes['project-name'].value}`);
 	}
 
 	disconnectedCallback() {
-		//console.log("Custom element removed from page.");
+		//console.log('Custom element removed from page.');
 	}
 
 	connectedMoveCallback() {
-		//console.log("Custom element moved with moveBefore()");
+		//console.log('Custom element moved with moveBefore()');
 	}
 
 	adoptedCallback() {
-		//console.log("Custom element moved to new page.");
+		//console.log('Custom element moved to new page.');
 	}
 
 
-	attributeChangedCallback(name, oldValue, newValue) {
-		console.log(
-			`Attribute ${name} has changed from ${oldValue} to ${newValue}.`,
-		);
-		if (name === 'colour') {
-			this.updateColourInputs(newValue);
-		}
-	}
+	// attributeChangedCallback(name, oldValue, newValue) {
+	// 	console.log(
+	// 		`Attribute ${name} has changed from ${oldValue} to ${newValue}.`,
+	// 	);
+	// 	if (name === 'colour') {
+	// 		this.updateColourInputs(newValue);
+	// 	}
+	// }
 
-	internalUpdate(colourString) {
-		this.updateColourInputs(colourString);
-		this.attributes['colour'].value = colourString;
-	}
+	// internalUpdate(colourString) {
+	// 	this.updateColourInputs(colourString);
+	// 	this.attributes['colour'].value = colourString;
+	// }
 
-	updateColourInputs(colourString) {
-		this.colorInput.value = colourString;
-		this.textInput.value = colourString;
-		const changeEvent = new CustomEvent('change', {detail:colourString});
-		this.dispatchEvent(changeEvent);
-	}
+	// updateColourInputs(colourString) {
+	// 	this.colorInput.value = colourString;
+	// 	this.textInput.value = colourString;
+	// 	const changeEvent = new CustomEvent('change', {detail:colourString});
+	// 	this.dispatchEvent(changeEvent);
+	// }
 
 }/* class ProjectCard */
 
 
-customElements.define("project-card", ProjectCard);
+customElements.define('project-card', ProjectCard);
