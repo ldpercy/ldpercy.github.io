@@ -4,7 +4,14 @@
 
 
 export class ProjectCard extends HTMLElement {
-	static observedAttributes = ['project-name'];
+
+	/** @type {string} */
+	projectName = '';
+
+	static observedAttributes = [
+		'project-name',
+		'project-path'
+	];
 
 
 	/** @type {HTMLInputElement} */ colorInput;
@@ -64,6 +71,10 @@ export class ProjectCard extends HTMLElement {
 						<dd><slot name="status"></dd>
 						<dt>Technology</dt>
 						<dd><slot name="technology"></dd>
+						<dt>Version</dt>
+						<dd><slot name="version"></dd>
+						<dt>Date</dt>
+						<dd><slot name="date"></dd>
 					</dl>
 				</div>
 				<div>
@@ -95,8 +106,17 @@ export class ProjectCard extends HTMLElement {
 	}/* constructor */
 
 
-	connectedCallback() {
-		console.log(`Project card added: ${this.attributes['project-name'].value}`);
+	async connectedCallback() {
+		this.projectName = this.attributes['project-name'].value;
+		//console.log(`Project card added: ${this.attributes['project-name'].value}, ${this.attributes['project-path'].value}`);
+
+
+
+		const projectDataPath = `/${this.attributes['project-path'].value}project.json`;
+		//console.log('projectDataPath',projectDataPath);
+		const projectData = await import(projectDataPath, { with: { type: "json" } });
+		console.log(`${this.projectName} data:`, projectData.default);
+		this.populateCard(projectData.default);
 	}
 
 	disconnectedCallback() {
@@ -121,17 +141,10 @@ export class ProjectCard extends HTMLElement {
 	// 	}
 	// }
 
-	// internalUpdate(colourString) {
-	// 	this.updateColourInputs(colourString);
-	// 	this.attributes['colour'].value = colourString;
-	// }
-
-	// updateColourInputs(colourString) {
-	// 	this.colorInput.value = colourString;
-	// 	this.textInput.value = colourString;
-	// 	const changeEvent = new CustomEvent('change', {detail:colourString});
-	// 	this.dispatchEvent(changeEvent);
-	// }
+	populateCard(projectData) {
+		this.shadowRoot.querySelector('slot[name=version]').innerHTML = projectData.version;
+		this.shadowRoot.querySelector('slot[name=date]').innerHTML = projectData.date;
+	}
 
 }/* class ProjectCard */
 
