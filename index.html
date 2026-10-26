@@ -29,6 +29,76 @@
 			</a>
 		</nav>
 	</header>
+
+
+	<!-- The project card template
+	-->
+	<template id="template-projectCard" ><!-- shadowrootmode="open" open closed -->
+		<style>
+			.project-icon { width:2em; }
+			h3 { margin-top:0em; }
+			.project-body {
+				display:grid;
+				grid-template-columns: 1fr 1fr;
+/*
+				// img {
+				// 	height: calc(20 * var(--project-base-length));
+				// 	text-align: end;
+				// } */
+			}
+			dl {
+				display:grid;
+				grid-template-columns: 1fr 2fr;
+				dt:before {
+					content: '⋄ ';
+				}
+			}
+			@media (max-width: 900px) {
+				dl {
+					grid-template-columns: 1fr;
+					dt:before { content:''; }
+					dt:after { content:':'; }
+				}
+			}
+
+		</style>
+
+		<h3>
+			<slot name="project-icon">project-icon</slot>
+			<slot name="project-name">project-name</slot>
+		</h3>
+
+		<div class="project-body">
+			<div>
+				<slot name="description">
+					project description
+				</slot>
+				<dl>
+					<dt>Repository</dt>
+					<dd>
+						<a href="">
+							<slot name="repository">
+						</a>
+					</dd>
+					<dt>Site</dt>
+					<dd><slot name="site"></dd>
+					<dt>Status</dt>
+					<dd><slot name="status"></dd>
+					<dt>Technology</dt>
+					<dd><slot name="technology"></dd>
+					<dt>Version</dt>
+					<dd><slot name="version"></dd>
+					<dt>Date</dt>
+					<dd><slot name="date"></dd>
+				</dl>
+			</div>
+			<div>
+				<slot name="project-image">project-image</slot>
+			</div>
+		</div>
+	</template>
+
+
 	<main>
 
 		<!-- <h2 slot="project-name">Projects</h2> -->
@@ -225,5 +295,6 @@
 
 
 	</main>
+
 </body>
 </html>

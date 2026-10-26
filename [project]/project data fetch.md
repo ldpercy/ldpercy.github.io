@@ -59,3 +59,23 @@ Not mega keen, but I should prob add the silver-js project to help work out how 
 These too should probably be moved back to their respective projects, and specified in the project json.
 
 
+
+project.json
+------------
+
+Currently working with something like this:
+```json
+{
+	"name"			: "turtle",
+	"description"	: "A simple implementation of turtle graphics in JavaScript & SVG",
+	"repository"	: "https://github.com/ldpercy/turtle/",
+	"version"		: "v0.👚①",
+	"commit"		: "abcdef",
+	"date"			: "2026-10-25",
+	"status"		: "style followup",
+	"tag"			: ["html","css","svg","js"]
+}
+```
+
+There are more things I need though, like the preview images.
+Might also want to think about renaming some things in terms of releases.

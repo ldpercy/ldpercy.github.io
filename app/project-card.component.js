@@ -21,7 +21,12 @@ export class ProjectCard extends HTMLElement {
 	constructor() {
 		super();				// Always call super first in constructor
 
+		const template = /** @type {HTMLTemplateElement} */ (document.getElementById('template-projectCard'));
+		const templateContent = template.content;
+
 		this.attachShadow({ mode: 'open' });
+		this.shadowRoot.appendChild(templateContent.cloneNode(true));
+		/*
 		this.shadowRoot.innerHTML = `
 			<style>
 				.project-icon { width:2em; }
@@ -64,7 +69,7 @@ export class ProjectCard extends HTMLElement {
 					</slot>
 					<dl>
 						<dt>Repository</dt>
-						<dd><slot name="repo"></dd>
+						<dd><slot name="repository"></dd>
 						<dt>Site</dt>
 						<dd><slot name="site"></dd>
 						<dt>Status</dt>
@@ -83,6 +88,7 @@ export class ProjectCard extends HTMLElement {
 			</div>
 
 		`;
+		*/
 		// something is enforcing a min-width...
 
 
@@ -142,8 +148,11 @@ export class ProjectCard extends HTMLElement {
 	// }
 
 	populateCard(projectData) {
-		this.shadowRoot.querySelector('slot[name=version]').innerHTML = projectData.version;
-		this.shadowRoot.querySelector('slot[name=date]').innerHTML = projectData.date;
+		this.shadowRoot.querySelector('slot[name=project-name]').innerHTML	= projectData.name;
+		this.shadowRoot.querySelector('slot[name=repository]').innerHTML			= projectData.repository;
+
+		this.shadowRoot.querySelector('slot[name=version]').innerHTML		= projectData.version;
+		this.shadowRoot.querySelector('slot[name=date]').innerHTML			= projectData.date;
 	}
 
 }/* class ProjectCard */
