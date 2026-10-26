@@ -149,7 +149,12 @@ export class ProjectCard extends HTMLElement {
 
 	populateCard(projectData) {
 		this.shadowRoot.querySelector('slot[name=project-name]').innerHTML	= projectData.name;
-		this.shadowRoot.querySelector('slot[name=repository]').innerHTML			= projectData.repository;
+
+		this.shadowRoot.querySelector('slot[name=repository]').innerHTML	= projectData.repository.replace('https://','');
+
+		const repoLink = /** @type {HTMLAnchorElement} */ (this.shadowRoot.querySelector('a#project-repository-link'));
+		repoLink.href = projectData.repository;
+
 
 		this.shadowRoot.querySelector('slot[name=version]').innerHTML		= projectData.version;
 		this.shadowRoot.querySelector('slot[name=date]').innerHTML			= projectData.date;

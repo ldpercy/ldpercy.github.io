@@ -6,6 +6,7 @@ h2 { border: none; }
 
 
 a {
+	transition: all ease-in var(--transition-duration);
 	text-decoration-line: none;
 	color: var(--link-colour);
 	&:hover {

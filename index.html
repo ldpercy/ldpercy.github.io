@@ -35,6 +35,8 @@
 	-->
 	<template id="template-projectCard" ><!-- shadowrootmode="open" open closed -->
 		<style>
+			@import "./style/text.css";
+
 			.project-icon { width:2em; }
 			h3 { margin-top:0em; }
 			.project-body {
@@ -60,7 +62,6 @@
 					dt:after { content:':'; }
 				}
 			}
-
 		</style>
 
 		<h3>
@@ -76,7 +77,7 @@
 				<dl>
 					<dt>Repository</dt>
 					<dd>
-						<a href="">
+						<a href="" id="project-repository-link">
 							<slot name="repository">
 						</a>
 					</dd>
@@ -100,35 +101,7 @@
 
 
 	<main>
-
 		<!-- <h2 slot="project-name">Projects</h2> -->
-
-
-		<!-- <project-card>
-			<span slot="project-name">project-card test card</span>
-			<img slot="project-icon" src="./favicon.svg"/>
-
-			<div slot="project-text">
-				<p>
-					Here are the project details:
-				</p>
-				<ul>
-					<li>
-						<a href="https://ldpercy.github.io/turtle/">website</a>
-					</li>
-					<li>
-						<a href="https://github.com/ldpercy/turtle/">github page</a>
-					</li>
-				</ul>
-			</div>
-			<div slot="project-image">
-				<a class="pic-link" href="https://ldpercy.github.io/turtle/">
-					<img src="./image/turtle-screenshot-1.png">
-				</a>
-			</div>
-
-		</project-card> -->
-
 
 		<project-card project-name="turtle" project-path="turtle/">
 			<span slot="project-name">Turtle</span>
