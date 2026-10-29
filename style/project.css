@@ -68,7 +68,7 @@ project-card {
 	border: 1px dotted var(--bg-colour);
 
 
-	[slot='project-icon'] {
+	[slot='project-favicon'] {
 		text-align:center;
 		float:right;
 		width:2em;

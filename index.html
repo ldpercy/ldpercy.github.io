@@ -31,7 +31,7 @@
 	</header>
 
 
-	<!-- The project card template
+	<!-- Project card template
 	-->
 	<template id="template-projectCard" ><!-- shadowrootmode="open" open closed -->
 		<style>
@@ -39,6 +39,11 @@
 
 			.project-icon { width:2em; }
 			h3 { margin-top:0em; }
+				[slot='project-favicon'] {
+				text-align:center;
+				float:right;
+				width:2em;
+			}
 			.project-body {
 				display:grid;
 				grid-template-columns: 1fr 1fr;
@@ -65,24 +70,27 @@
 		</style>
 
 		<h3>
-			<slot name="project-icon">project-icon</slot>
+			<!-- <slot name="project-favicon">project-favicon</slot> -->
+			<a class="project-favicon-anchor" href="">
+				<img slot="project-favicon" src="./favicon.svg"/> <!-- alt="Terry the turtle" title="Terry the turtle" -->
+			</a>
 			<slot name="project-name">project-name</slot>
 		</h3>
 
 		<div class="project-body">
 			<div>
-				<slot name="description">
+				<p slot="project-description">
 					project description
-				</slot>
+				</p>
 				<dl>
+					<dt>Site</dt>
+					<dd><slot name="site"></dd>
 					<dt>Repository</dt>
 					<dd>
 						<a href="" id="project-repository-link">
 							<slot name="repository">
 						</a>
 					</dd>
-					<dt>Site</dt>
-					<dd><slot name="site"></dd>
 					<dt>Status</dt>
 					<dd><slot name="status"></dd>
 					<dt>Technology</dt>
@@ -261,6 +269,10 @@
 			</div>
 		</project-card>
 
+
+		<project-card project-name="HTML Common" project-path="html-common/">
+			try to load the project json
+		</project-card>
 
 		<project-card project-name="silverdata-js" project-path="silver-language/silverdata-js/">
 			try to load the project json
