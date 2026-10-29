@@ -148,6 +148,8 @@ export class ProjectCard extends HTMLElement {
 	// }
 
 	populateCard(projectData) {
+
+
 		this.shadowRoot.querySelector('slot[name=project-name]').innerHTML	= projectData.name;
 		this.shadowRoot.querySelector('[slot=project-description]').innerHTML	= projectData.description;
 
@@ -160,6 +162,7 @@ export class ProjectCard extends HTMLElement {
 		this.shadowRoot.querySelector('[slot=project-favicon]').setAttribute('src', faviconSrc);
 
 		this.shadowRoot.querySelector('.project-favicon-anchor').setAttribute('href', projectData.repository);
+		this.shadowRoot.querySelector('.project-title-anchor').setAttribute('href', `/${this.attributes['project-path'].value}` );
 
 
 		this.shadowRoot.querySelector('slot[name=version]').innerHTML		= projectData.version;
