@@ -38,16 +38,20 @@
 			@import "./style/text.css";
 
 			.project-icon { width:2em; }
-			h3 { margin-top:0em; }
-				[slot='project-favicon'] {
+			h3 {
+				margin-top:0em;
+			}
+
+			[slot='project-favicon'] {
 				text-align:center;
 				float:right;
 				width:2em;
 			}
+
 			.project-body {
 				display:grid;
 				grid-template-columns: 1fr 1fr;
-/*
+				/*
 				// img {
 				// 	height: calc(20 * var(--project-base-length));
 				// 	text-align: end;

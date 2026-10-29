@@ -60,7 +60,7 @@ article {
 project-card {
 	margin:1em;
 	padding:1em;
-	--bg-colour: #8881;
+	--bg-colour: #8080801a;
 	background-color: var(--bg-colour);
 
 	border-radius:0em;
