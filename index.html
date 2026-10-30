@@ -64,6 +64,9 @@
 					content: '⋄ ';
 				}
 			}
+			[name="project-image"] {
+				vertical-align: middle;		/* not working yet */
+			}
 			@media (max-width: 900px) {
 				dl {
 					grid-template-columns: 1fr;
@@ -104,7 +107,9 @@
 					<dt>Version</dt>
 					<dd><slot name="version"></dd>
 					<dt>Date</dt>
-					<dd><slot name="date"></dd>
+					<dd>
+						<time class="release-date" datetime=""></time>
+					</dd>
 				</dl>
 			</div>
 			<div>

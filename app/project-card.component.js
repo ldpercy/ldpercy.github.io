@@ -148,9 +148,15 @@ export class ProjectCard extends HTMLElement {
 	// }
 
 	populateCard(projectData) {
-
-
+		//project title
 		this.shadowRoot.querySelector('slot[name=project-name]').innerHTML	= projectData.name;
+		this.shadowRoot.querySelector('.project-title-anchor').setAttribute('href', `/${this.attributes['project-path'].value}` );
+
+		//project favicon
+		const faviconSrc = `/${this.attributes['project-path'].value}favicon.svg`;
+		this.shadowRoot.querySelector('[slot=project-favicon]').setAttribute('src', faviconSrc);
+		this.shadowRoot.querySelector('.project-favicon-anchor').setAttribute('href', projectData.repository);
+
 		this.shadowRoot.querySelector('[slot=project-description]').innerHTML	= projectData.description;
 
 		this.shadowRoot.querySelector('slot[name=repository]').innerHTML	= projectData.repository.replace('https://','');
@@ -158,16 +164,12 @@ export class ProjectCard extends HTMLElement {
 		const repoLink = /** @type {HTMLAnchorElement} */ (this.shadowRoot.querySelector('a#project-repository-link'));
 		repoLink.href = projectData.repository;
 
-		const faviconSrc = `/${this.attributes['project-path'].value}favicon.svg`;
-		this.shadowRoot.querySelector('[slot=project-favicon]').setAttribute('src', faviconSrc);
-
-		this.shadowRoot.querySelector('.project-favicon-anchor').setAttribute('href', projectData.repository);
-		this.shadowRoot.querySelector('.project-title-anchor').setAttribute('href', `/${this.attributes['project-path'].value}` );
-
-
+		// release
 		this.shadowRoot.querySelector('slot[name=version]').innerHTML		= projectData.version;
-		this.shadowRoot.querySelector('slot[name=date]').innerHTML			= projectData.date;
-	}
+		this.shadowRoot.querySelector('.release-date').innerHTML			= projectData.date;
+		this.shadowRoot.querySelector('.release-date').setAttribute('datetime', projectData.date);
+	}/* populateCard */
+
 
 }/* class ProjectCard */
 
