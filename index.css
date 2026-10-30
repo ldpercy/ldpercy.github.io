@@ -65,7 +65,9 @@ html {
 
 		/* border: 30px solid; */
 
-		background-color: var(--scheme-colour);
+		background-color: #8888;	/* var(--scheme-colour); */
+		backdrop-filter: blur(1ex);
+
 		corner-shape: bevel;
 	}
 

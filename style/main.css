@@ -4,10 +4,10 @@
 
 
 main {
-	margin:0px;
+	margin:0em;
 	display:grid;
 	grid-template-columns: 1fr ;
-
+	gap: 2em;
 	h2 { grid-column-start: span 2; }
 
 }
