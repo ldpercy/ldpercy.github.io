@@ -37,15 +37,15 @@
 		<style>
 			@import "./style/text.css";
 
-			.project-icon { width:2em; }
-			h3 {
-				margin-top:0em;
-			}
-
-			[slot='project-favicon'] {
-				text-align:center;
-				float:right;
-				width:2em;
+			header {
+				display:flex;
+				gap: 1em;
+				h3 {
+					flex:1;
+					margin:0em;
+					font-size:1.5rem;
+				}
+				.project-icon { width:2em; }
 			}
 
 			.project-body {
@@ -67,6 +67,19 @@
 			[name="project-image"] {
 				vertical-align: middle;		/* not working yet */
 			}
+			.project-image {
+				text-align:center;
+				vertical-align: middle;
+				img {
+					height: calc(20 * var(--project-base-length));
+					filter: drop-shadow(0px 0px 0px var(--accent-colour));	/* chrome seems to need this? */
+					&:hover {
+						filter: drop-shadow(0px 0px var(--project-base-length) var(--accent-colour));
+						/* outline: 1px solid var(--accent-colour); */
+					}
+				}
+			}
+
 			@media (max-width: 900px) {
 				dl {
 					grid-template-columns: 1fr;
@@ -76,21 +89,22 @@
 			}
 		</style>
 
-		<h3>
-			<!-- <slot name="project-favicon">project-favicon</slot> -->
-			<a class="project-favicon-anchor" href="">
-				<img slot="project-favicon" src="./favicon.svg"/> <!-- alt="Terry the turtle" title="Terry the turtle" -->
-			</a>
-			<a class="project-title-anchor" href="">
-				<slot name="project-name">project-name</slot>
-			</a>
-		</h3>
+		<header>
+			<h3>
+				<a class="project-title-anchor" href="">
+					<slot name="project-name">project-name</slot>
+				</a>
+			</h3>
+			<nav>
+				<a class="project-icon-anchor" href="">
+					<img class="project-icon" src="./favicon.svg"/> <!-- alt="Terry the turtle" title="Terry the turtle" -->
+				</a>
+			</nav>
+		</header>
 
 		<div class="project-body">
-			<div>
-				<p slot="project-description">
-					project description
-				</p>
+			<div class="project-text">
+				<p class="project-description"> project description </p>
 				<dl>
 					<dt>Site</dt>
 					<dd><slot name="site"></dd>
@@ -112,8 +126,8 @@
 					</dd>
 				</dl>
 			</div>
-			<div>
-				<slot name="project-image">project-image</slot>
+			<div class="project-image">
+				<slot >project-image</slot>
 			</div>
 		</div>
 	</template>
@@ -123,6 +137,7 @@
 		<!-- <h2 slot="project-name">Projects</h2> -->
 
 		<project-card project-name="turtle" project-path="turtle/">
+			<!--
 			<span slot="project-name">Turtle</span>
 			<img slot="project-icon" src="/turtle/favicon.svg" alt="Terry the turtle" title="Terry the turtle"/>
 
@@ -144,12 +159,12 @@
 					<img src="./image/turtle-screenshot-1.png">
 				</a>
 			</div>
-
+			-->
 		</project-card>
 
 
 		<project-card project-name="year-clock" project-path="year-clock/">
-			<span slot="project-name">
+			<!-- <span slot="project-name">
 				Year Clock
 			</span>
 			<img slot="project-icon" src="/year-clock/favicon.svg" alt="Year clock" title="Year clock"/>
@@ -174,13 +189,13 @@
 				<a class="pic-link" href="/year-clock/?theme=lightning&date=2006-05-25">
 					<img width="45%" src="image/yearclock-lightning.svg" alt="Year clock example: lightning theme" title="?theme=lightning&date=2006-05-25"/>
 				</a>
-			</div>
+			</div> -->
 
 		</project-card>
 
 
 		<project-card project-name="screensaver" project-path="screensaver/">
-			<span slot="project-name">
+			<!-- <span slot="project-name">
 				Screensaver
 			</span>
 			<img slot="project-icon" src="/screensaver/favicon.svg" alt="Screensaver favicon" title="Screensaver"/>
@@ -200,13 +215,13 @@
 				<a class="pic-link" href="/screensaver/">
 					<img src="./image/screensaver-screenshot-1.png">
 				</a>
-			</div>
+			</div> -->
 		</project-card>
 
 
 
 		<project-card project-name="medit" project-path="medit/">
-			<span slot="project-name">
+			<!-- <span slot="project-name">
 				Medit
 			</span>
 			<img slot="project-icon" src="/medit/favicon.svg" alt="Medit favicon" title="Medit"/>
@@ -225,11 +240,12 @@
 				<a class="pic-link" href="/medit/">
 					<img src="./image/medit-screenshot-2.png">
 				</a>
-			</div>
+			</div> -->
 		</project-card>
 
 
 		<project-card project-name="html-experiment" project-path="html-experiment/">
+			<!--
 			<span slot="project-name">
 				html-experiment
 			</span>
@@ -278,15 +294,16 @@
 					<img src="./image/html-experiment-screenshot-1.png">
 				</a>
 			</div>
+			 -->
 		</project-card>
 
 
 		<project-card project-name="HTML Common" project-path="html-common/">
-			try to load the project json
+			<!-- try to load the project json -->
 		</project-card>
 
 		<project-card project-name="silverdata-js" project-path="silver-language/silverdata-js/">
-			try to load the project json
+			<!-- try to load the project json -->
 		</project-card>
 
 

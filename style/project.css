@@ -68,15 +68,16 @@ project-card {
 	border: 1px dotted var(--bg-colour);
 
 
-	[slot='project-favicon'] {
+	/* [slot='project-favicon'] {
 		text-align:center;
 		float:right;
 		width:2em;
-	}
+	} */
 
 
 	[slot='project-image'] {
 		text-align:center;
+		vertical-align: middle;
 		img {
 			height: calc(20 * var(--project-base-length));
 			filter: drop-shadow(0px 0px 0px var(--accent-colour));	/* chrome seems to need this? */
