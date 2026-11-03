@@ -116,13 +116,14 @@ export class ProjectCard extends HTMLElement {
 		this.projectName = this.attributes['project-name'].value;
 		//console.log(`Project card added: ${this.attributes['project-name'].value}, ${this.attributes['project-path'].value}`);
 
-
-
-		const projectDataPath = `/${this.attributes['project-path'].value}project.json`;
+		const projectDataPath = `/${this.attributes['project-path'].value}project.js`;
 		//console.log('projectDataPath',projectDataPath);
-		const projectData = await import(projectDataPath, { with: { type: "json" } });
-		console.log(`${this.projectName} data:`, projectData.default);
-		this.populateCard(projectData.default);
+
+		/** @type ProjectData*/
+		const projectData = (await import(projectDataPath)).default;
+
+		console.log(`${this.projectName} data:`, projectData);
+		this.populateCard(projectData);
 	}
 
 	disconnectedCallback() {
@@ -147,6 +148,8 @@ export class ProjectCard extends HTMLElement {
 	// 	}
 	// }
 
+
+	/** @param {ProjectData} projectData */
 	populateCard(projectData) {
 		//project title
 		this.shadowRoot.querySelector('slot[name=project-name]').innerHTML	= projectData.name;

@@ -79,3 +79,38 @@ Currently working with something like this:
 
 There are more things I need though, like the preview images.
 Might also want to think about renaming some things in terms of releases.
+
+
+### Typing
+
+Had been thinking about defining a JSDoc type to ensure all the apps use the same project structure - but you can't type json with JSDoc.
+There's JSON Schema, but don't think I want to go down that particular path this time.
+
+I could change the `project.json` files over to become `project.js` modules, which are basically just as easy to import, but a tad more dangerous as it allows for code execution.
+Will have a think about the safety of it, but for argument's sake it might look something like the following:
+
+```js
+
+/** ProjectData
+ * @typedef {Object} ProjectData
+ * @property {string}	name
+ * @property {string}	description
+ * @property {string}	repository
+ * @property {string}	version
+ * @property {string}	date
+ * @property {string}	status
+ * @property {array<string>} tag
+ */
+
+
+export default {
+	"name"			: "turtle",
+	"description"	: "A simple implementation of turtle graphics in JavaScript & SVG",
+	"repository"	: "https://github.com/ldpercy/turtle/",
+	"version"		: "v0.👚①",
+	"date"			: "2026-10-25",
+	"status"		: "style followup",
+	"tag"			: ["html","css","svg","js"]
+}
+
+```
