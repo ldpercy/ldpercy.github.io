@@ -57,10 +57,15 @@ span.tag {
 	b {
 		display: inline-block;
 		font-size: smaller;
-		background-color: var(--accent-colour);
 		margin: 0.1em;
 		padding: 0em  0.5em;
 		border-radius: 0.5em;
+		text-transform: lowercase;
+
+		color: 				light-dark(white,black );
+		background-color:	light-dark(#666, #aaa);
+
+
 	}
 
 	.html	{	color: white;	background-color: #e42;	}

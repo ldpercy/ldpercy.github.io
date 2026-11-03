@@ -107,7 +107,11 @@
 				<p class="project-description"> project description </p>
 				<dl>
 					<dt>Site</dt>
-					<dd><slot name="site"></dd>
+					<dd>
+						<a href="" id="project-site-link">
+							<slot name="site">
+						</a>
+					</dd>
 					<dt>Repository</dt>
 					<dd>
 						<a href="" id="project-repository-link">
@@ -116,8 +120,8 @@
 					</dd>
 					<dt>Status</dt>
 					<dd><slot name="status"></dd>
-					<dt>Technology</dt>
-					<dd><slot name="technology"></dd>
+					<dt>Tag</dt>
+					<dd><span class="tag"></dd>
 					<dt>Version</dt>
 					<dd><slot name="version"></dd>
 					<dt>Date</dt>

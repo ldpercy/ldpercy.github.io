@@ -2,6 +2,7 @@
 **	ProjectCard
 */
 
+import { origin } from './ldpercyApp.js';
 
 export class ProjectCard extends HTMLElement {
 
@@ -151,6 +152,9 @@ export class ProjectCard extends HTMLElement {
 
 	/** @param {ProjectData} projectData */
 	populateCard(projectData) {
+		let images = '';
+		let tagHtml = '';
+
 		//project title
 		this.shadowRoot.querySelector('slot[name=project-name]').innerHTML	= projectData.name;
 		this.shadowRoot.querySelector('.project-title-anchor').setAttribute('href', `/${this.attributes['project-path'].value}` );
@@ -162,7 +166,15 @@ export class ProjectCard extends HTMLElement {
 
 		this.shadowRoot.querySelector('.project-description').innerHTML	= projectData.description;
 
-		this.shadowRoot.querySelector('slot[name=repository]').innerHTML	= projectData.repository.replace('https://','');
+		const siteLink = /** @type {HTMLAnchorElement} */ (this.shadowRoot.querySelector('a#project-site-link'));
+
+		let siteUrl = `${origin}/${this.attributes['project-path'].value}`;
+
+		siteLink.href = siteUrl;
+
+		this.shadowRoot.querySelector('slot[name=site]').innerHTML = siteUrl;
+
+		this.shadowRoot.querySelector('slot[name=repository]').innerHTML	= projectData.repository; //.replace('https://','')
 
 		const repoLink = /** @type {HTMLAnchorElement} */ (this.shadowRoot.querySelector('a#project-repository-link'));
 		repoLink.href = projectData.repository;
@@ -171,10 +183,7 @@ export class ProjectCard extends HTMLElement {
 		this.shadowRoot.querySelector('slot[name=version]').innerHTML		= projectData.version;
 		this.shadowRoot.querySelector('.release-date').innerHTML			= projectData.date;
 		this.shadowRoot.querySelector('.release-date').setAttribute('datetime', projectData.date);
-
-
-		let images = '';
-
+		this.shadowRoot.querySelector('slot[name=status]').innerHTML		= projectData.status;
 
 		// screenshots/examples
 		if (projectData.screenshot) {
@@ -192,6 +201,15 @@ export class ProjectCard extends HTMLElement {
 			this.shadowRoot.querySelector('.project-image').innerHTML = images;
 		}
 
+		if (projectData.tag) {
+			projectData.tag.forEach(
+				(item) => {
+					tagHtml += `<b class="${item}">${item}</b> `;
+				}
+			);
+
+			this.shadowRoot.querySelector('span.tag').innerHTML = tagHtml;
+		}
 
 
 	}/* populateCard */

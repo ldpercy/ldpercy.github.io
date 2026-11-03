@@ -8,6 +8,7 @@ import { controller} from './controller.js';
 // import { documentArea } from './document-area.js';
 // import { ui } from './main-ui.js';
 
+export const origin = new URL(window.location.href).origin;
 
 class LdpercyApp extends HTMLApp {
 
@@ -34,6 +35,10 @@ class LdpercyApp extends HTMLApp {
 
 
 	documentDOMContentLoaded() {
+
+		console.log('documentDOMContentLoaded');
+		//new URL(window.location.href)
+
 		super.documentDOMContentLoaded();
 		this.setup();
 	}/* documentDOMContentLoaded */
