@@ -61,6 +61,7 @@ span.tag {
 		padding: 0em  0.5em;
 		border-radius: 0.5em;
 		text-transform: lowercase;
+		/* text-align: center; */
 
 		color: 				light-dark(white,black );
 		background-color:	light-dark(#666, #aaa);
@@ -72,5 +73,6 @@ span.tag {
 	.css	{	color: white;	background-color: rebeccapurple;	}
 	.svg	{	color: #333;	background-color: #fb3;	}
 	.js		{	color: black;	background-color: #fd1;	}
+	.🍦js	{ 	color: lightyellow;	background-color: dimgrey;	}
 
 }

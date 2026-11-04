@@ -156,7 +156,7 @@ export class ProjectCard extends HTMLElement {
 		let tagHtml = '';
 
 		//project title
-		this.shadowRoot.querySelector('slot[name=project-name]').innerHTML	= projectData.name;
+		this.shadowRoot.querySelector('slot[name=project-name]').innerHTML	= this.attributes['project-name'].value;
 		this.shadowRoot.querySelector('.project-title-anchor').setAttribute('href', `/${this.attributes['project-path'].value}` );
 
 		//project icon
@@ -172,9 +172,9 @@ export class ProjectCard extends HTMLElement {
 
 		siteLink.href = siteUrl;
 
-		this.shadowRoot.querySelector('slot[name=site]').innerHTML = siteUrl;
+		this.shadowRoot.querySelector('slot[name=site]').innerHTML = siteUrl.replace(/https?:\/\//,'');
 
-		this.shadowRoot.querySelector('slot[name=repository]').innerHTML	= projectData.repository; //.replace('https://','')
+		this.shadowRoot.querySelector('slot[name=repository]').innerHTML	= projectData.repository.replace(/https?:\/\//,'');
 
 		const repoLink = /** @type {HTMLAnchorElement} */ (this.shadowRoot.querySelector('a#project-repository-link'));
 		repoLink.href = projectData.repository;
