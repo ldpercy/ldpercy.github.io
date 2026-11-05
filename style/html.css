@@ -1,0 +1,82 @@
+/*
+**	html.css
+*/
+
+
+html {
+
+	--transition-duration: 0.5s;
+
+	font-size: calc(2 * var(--project-base-length));
+	font-family: sans-serif;
+
+	* {
+		transition: all ease-in var(--transition-duration);
+	}
+
+	--scheme-colour: oklab(from var(--project-colour) 0.80 a b / alpha);
+	--accent-colour: hsl(from var(--project-accent) h s 40 );
+
+
+	meta[name=theme-color] {
+		/* trying a little hack here - this element has no display, but it can be used to compute the colour change as it has no transition */
+		transition: none;
+		color: var(--scheme-colour);
+	}
+
+	margin:0em;
+	padding:0em;
+	color: lab( from var(--scheme-colour) calc(sign(l - 70) * -100) 0 0 / 1);
+	accent-color: var(--accent-colour);
+
+
+	background-image: url('../favicon.svg');
+	background-size: 100% auto;
+
+	body {
+		margin:1em;
+		padding:1em;
+		border-radius:1em;
+
+		/* border: 30px solid; */
+
+		background-color: #8888;	/* var(--scheme-colour); */
+		backdrop-filter: blur(1ex);
+
+		corner-shape: bevel;
+	}
+
+
+
+}
+
+
+
+html {
+	color-scheme: light;
+	accent-color: var(--accent);
+	background-color: var(--html-background);
+}
+
+
+html[data-colourscheme=light] {
+	color-scheme: light;
+	--scheme-colour: white;
+	--accent-colour:   hsl(from var(--project-accent) h s 40 );
+	--html-background: hsl(from var(--project-colour) h s 90 / alpha);
+
+	--link-colour:   hsl(from var(--project-link-colour) h s 20 );
+}
+
+html[data-colourscheme=dark] {
+	color-scheme: dark;
+	--scheme-colour: #0a0a0a;
+	--accent-colour:   hsl(from var(--project-accent) h s 60 );
+	--html-background: hsl(from var(--project-colour) h s 10 / alpha);
+
+	--link-colour:   hsl(from var(--project-link-colour) h s 80 );
+
+}
+
+
+
