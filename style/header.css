@@ -13,7 +13,9 @@ header {
 	padding-inline: calc(3 * var(--project-base-length));
 
 	background-color: hsl(from var(--scheme-colour) h s l / 0.9);
-	border-bottom: 2px solid var(--html-background);
+	/* background-color: transparent; */
+	/* border-bottom: 2px solid var(--html-background); */
+	border-bottom: none;
 
 	h1::before {
 		content: none;
@@ -23,6 +25,8 @@ header {
 	h1 {
 		font-family: monospace;
 		font-size: inherit;
+		/* filter: drop-shadow(0ex 1pt 1pt  var(--scheme-colour) );
+		font-size:3rem; */
 	}
 	nav {
 		font-size: inherit;

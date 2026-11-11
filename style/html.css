@@ -26,7 +26,10 @@ html {
 
 	margin:0em;
 	padding:0em;
-	color: lab( from var(--scheme-colour) calc(sign(l - 70) * -100) 0 0 / 1);
+
+	--text-colour: lab( from var(--scheme-colour) calc(sign(l - 70) * -100) 0 0 / 1);
+
+	color: var(--text-colour);
 	accent-color: var(--accent-colour);
 
 
@@ -41,9 +44,20 @@ html {
 		/* border: 30px solid; */
 
 		background-color: #8888;	/* var(--scheme-colour); */
-		backdrop-filter: blur(1ex);
 
-		corner-shape: bevel;
+
+		backdrop-filter: blur(1ex);
+		/* backdrop-filter: url(#blurMe); */
+
+		/* mask: radial-gradient(
+			ellipse at center,
+			black 0%,
+			black 75%,
+			transparent 100%
+		) */
+
+
+		/* corner-shape: bevel; */
 	}
 
 
