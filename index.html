@@ -12,7 +12,8 @@
 <body>
 	<header>
 		<h1>
-			<a href="/ldpercy.github.io/">ldpercy.github.io</a>
+			<a href="/ldpercy.github.io/">ldpercy.github.io</a> <!-- LlIi -->
+			<!-- <span title="Happy Christmas!">🎄</span> -->
 		</h1>
 		<nav>
 			<a id="colourScheme-toggle" class="colourScheme-selector" href="?colourScheme=toggle" title="Toggle colour scheme" data-colourscheme="toggle">
@@ -86,6 +87,15 @@
 						/* outline: 1px solid var(--accent-colour); */
 					}
 				}
+			}
+			img {
+				transition: all ease-in var(--transition-duration);
+				filter: drop-shadow(0px 0px 0px transparent);	/* chrome seems to need this? */
+			}
+			img:hover {
+
+				filter: drop-shadow(0px 0px var(--project-base-length) var(--accent-colour));
+				/* outline: 1px solid var(--accent-colour); */
 			}
 
 			@media (max-width: 900px) {

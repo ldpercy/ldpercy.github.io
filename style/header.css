@@ -4,18 +4,41 @@
 
 header {
 
-	--header-colour: color-mix(in srgb, var(--project-colour) 75%, var(--text-colour));
+	border-radius: 1rem;
+	padding-block: calc(3 * var(--project-base-length));
 
-	--font-size: calc(5 * var(--project-base-length));
+	padding-inline: calc(2 * var(--project-base-length));
+
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	gap: 2rem;
+
+	margin-bottom: 1em;
+
+
+	--header-colour: color-mix(in srgb, var(--project-colour) 60%, var(--text-colour));
+
+
+	--font-size: calc(6 * var(--project-base-length));
 	font-size: var(--font-size);
+	line-height: calc(6 * var(--project-base-length));
 
-	padding-block:0em;
-	padding-inline: calc(3 * var(--project-base-length));
 
-	background-color: hsl(from var(--scheme-colour) h s l / 0.9);
+	filter:
+
+		drop-shadow(0em 0em 1pt var(--scheme-colour))
+		drop-shadow(0em 0em 1rem var(--scheme-colour))
+		;
+
+
+	/* background-color: hsl(from var(--scheme-colour) h s l / 0.9); */
 	/* background-color: transparent; */
-	/* border-bottom: 2px solid var(--html-background); */
-	border-bottom: none;
+
+
+	a {
+		color: color-mix(in srgb, var(--project-colour) 60%, var(--text-colour));
+	}
+
 
 	h1::before {
 		content: none;
@@ -23,20 +46,33 @@ header {
 	}
 
 	h1 {
-		font-family: monospace;
-		font-size: inherit;
+		font-family:  "Hack", monospace; /* OCR A, */
+		font-size: 4rem;
+		margin: 1rem 0em 0em;
+		/* filter: url(./filter.svg#snow-crest); */
 		/* filter: drop-shadow(0ex 1pt 1pt  var(--scheme-colour) );
 		font-size:3rem; */
+
+
 	}
 	nav {
+		/* background-color: hsl(from var(--scheme-colour) h s l / 0.9); */
+		border-radius: 1rem;
+		padding:1rem;
+		text-align:right;
+		font-weight:bold;
+		font-size: 2em;
+
+
+
 		font-size: inherit;
 		img {
 			width: var(--font-size);
 			vertical-align: sub;
 		}
-		img {
-			filter: drop-shadow(0px 0px 0px var(--accent-colour));	/* chrome seems to need this? */
-		}
+		/*  img {
+			filter: drop-shadow(0px 0px 0px var(--scheme-colour));	/ * chrome seems to need this? * /
+		} */
 		img:hover {
 			filter: drop-shadow(0px 0px var(--project-base-length) var(--accent-colour));
 			/* outline: 1px solid var(--accent-colour); */

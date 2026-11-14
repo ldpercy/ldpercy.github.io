@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg viewBox="-600 -400 1200 800" version="1.1" xmlns="http://www.w3.org/2000/svg"
+	xmlns:svg="http://www.w3.org/2000/svg">
+
+
+	<defs>
+		<filter id="cracked-lava" style="color-interpolation-filters:sRGB;"  x="-0.019" y="-0.21" width="2" height="1.4">
+			<feGaussianBlur result="result0" in="SourceGraphic" stdDeviation="0.5" id="feGaussianBlur477" />
+			<feTurbulence baseFrequency="0.042" seed="488" numOctaves="7" result="result1" id="feTurbulence477" />
+			<feDisplacementMap result="result5" xChannelSelector="R" scale="0" in2="result1" in="result1"
+				yChannelSelector="G" id="feDisplacementMap477" />
+			<feComposite result="result2" operator="in" in2="result5" in="result0" id="feComposite477" />
+			<feSpecularLighting lighting-color="rgb(255,230,136)" surfaceScale="2" result="result4" specularConstant="2"
+				specularExponent="65" in="result2" id="feSpecularLighting477">
+				<feDistantLight elevation="62" azimuth="225" id="feDistantLight477" />
+			</feSpecularLighting>
+			<feComposite k1="2.5" k3="1" k2="-0.5" in2="result2" in="result4" operator="arithmetic" result="result91"
+				id="feComposite478" />
+			<feBlend result="fbSourceGraphic" mode="multiply" in2="result91" id="feBlend478" />
+			<feColorMatrix values="1 0 0 -1 0 1 0 1 -1 0 1 0 0 -1 0 -2 -0.5 0 5 -2" in="fbSourceGraphic"
+				result="fbSourceGraphicAlpha" id="feColorMatrix478" />
+			<feGaussianBlur stdDeviation="8" in="fbSourceGraphicAlpha" result="result0" id="feGaussianBlur478" />
+			<feOffset dx="2" dy="2" in="result0" result="result3" id="feOffset478" />
+			<feSpecularLighting in="result0" result="result1" lighting-color="rgb(255,255,255)" surfaceScale="4"
+				specularConstant="0.8" specularExponent="15" id="feSpecularLighting478">
+				<fePointLight x="-5000" y="-10000" z="20000" id="fePointLight478" />
+			</feSpecularLighting>
+			<feComposite in2="fbSourceGraphicAlpha" in="result1" result="result2" operator="in" id="feComposite479" />
+			<feComposite in="fbSourceGraphic" result="result4" operator="arithmetic" k2="2" k3="2" in2="result2"
+				id="feComposite480" />
+			<feBlend mode="darken" in2="result4" id="feBlend480" />
+		</filter>
+
+
+		<filter id="snow-crest"
+			style="color-interpolation-filters:sRGB;"
+
+			x="-0.0045"
+			y="-0.056"
+			width="2"
+			height="1.1">
+			<feConvolveMatrix
+				order="3 3"
+				kernelMatrix="1 1 1 0 0 0 -1 -1 -1"
+				preserveAlpha="false"
+				divisor="4"
+				id="feConvolveMatrix475" />
+			<feMorphology
+				operator="dilate"
+				radius="1 1"
+				id="feMorphology475" />
+			<feGaussianBlur
+				stdDeviation="0.7"
+				result="result0"
+				id="feGaussianBlur475" />
+			<feColorMatrix
+				values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10 0"
+				result="result1"
+				id="feColorMatrix475" />
+			<feOffset
+				dx="0"
+				dy="1"
+				result="result5"
+				id="feOffset475" />
+			<feDiffuseLighting
+				in="result0"
+				diffuseConstant="2"
+				surfaceScale="1"
+				id="feDiffuseLighting475">
+			 <feDistantLight
+				 azimuth="225"
+				 elevation="32"
+				 id="feDistantLight475" />
+			</feDiffuseLighting>
+			<feComposite
+				in2="result1"
+				operator="in"
+				result="result2"
+				id="feComposite475" />
+			<feColorMatrix
+				values="0.4 0 0 0 0.6 0 0.4 0 0 0.6 0 0 0 0 1 0 0 0 1 0"
+				result="result4"
+				id="feColorMatrix476" />
+			<feComposite
+				in2="result5"
+				in="result4"
+				id="feComposite476" />
+			<feComposite
+				in2="SourceGraphic"
+				id="feComposite477" />
+		</filter>
+
+
+	</defs>
+
+
+
+
+
+
+	<g>
+		<text x="0" y="0"
+			style="text-align:center;text-anchor:middle;filter:url(#snow-crest)"
+			>
+			<tspan x="0" y="0"
+				style="font-weight:bold;font-size:100px;font-family:Hack;">
+				ldpercy.github.io
+			</tspan>
+		</text>
+	</g>
+
+</svg>
