@@ -24,8 +24,8 @@ header {
 	line-height: calc(6 * var(--project-base-length));
 
 
+	/* text-shadow: 0px 0px 5px var(--scheme-colour); */
 	filter:
-
 		drop-shadow(0em 0em 1pt var(--scheme-colour))
 		drop-shadow(0em 0em 1rem var(--scheme-colour))
 		;
@@ -46,7 +46,7 @@ header {
 	}
 
 	h1 {
-		font-family:  "Hack", monospace; /* OCR A, */
+		font-family:  "Hack", "DejaVu Sans Mono", monospace; /* OCR A, */
 		font-size: 4rem;
 		margin: 1rem 0em 0em;
 		/* filter: url(./filter.svg#snow-crest); */

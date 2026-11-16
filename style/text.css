@@ -56,7 +56,7 @@ li {
 span.tag {
 	b {
 		display: inline-block;
-		font-size: smaller;
+		font-size: 0.8em;
 		margin: 0.1em;
 		padding: 0em  0.5em;
 		border-radius: 0.5em;
@@ -73,6 +73,7 @@ span.tag {
 	.css	{	color: white;	background-color: rebeccapurple;	}
 	.svg	{	color: #333;	background-color: #fb3;	}
 	.js		{	color: black;	background-color: #fd1;	}
-	.🍦js	{ 	color: lightyellow;	background-color: dimgrey;	}
+	.🍦js	{ 	color: snow;	background-color: dimgrey;	}
+	.jsdoc, .JSDoc	{	color: black;	background-color: whitesmoke;	outline:1px outset #8888; }
 
 }
