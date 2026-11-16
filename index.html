@@ -110,7 +110,7 @@
 		<header>
 			<h3>
 				<a class="project-title-anchor" href="">
-					<slot name="project-name">project-name</slot>
+					<slot name="project-name">{project-name}</slot>
 				</a>
 			</h3>
 			<nav>
@@ -122,29 +122,29 @@
 
 		<div class="project-body">
 			<div class="project-text">
-				<p class="project-description"> project description </p>
+				<p class="project-description"> {project-description} </p>
 				<dl>
 					<dt>Site</dt>
 					<dd>
 						<a href="" id="project-site-link">
-							<slot name="site">
+							<slot name="site">{project-site-link}</slot>
 						</a>
 					</dd>
 					<dt>Repository</dt>
 					<dd>
 						<a href="" id="project-repository-link">
-							<slot name="repository">
+							<slot name="repository">{project-repository}</slot>
 						</a>
 					</dd>
 					<dt>Status</dt>
-					<dd><slot name="status"></dd>
+					<dd><slot name="status">{project-status}</dd>
 					<dt>Tag</dt>
-					<dd><span class="tag"></dd>
+					<dd><span class="tag">{project-tag}</dd>
 					<dt>Version</dt>
-					<dd><slot name="version"></dd>
+					<dd><slot name="version">{project-version}</dd>
 					<dt>Date</dt>
 					<dd>
-						<time class="release-date" datetime=""></time>
+						<time class="release-date" datetime="">{release-date}</time>
 					</dd>
 				</dl>
 			</div>
@@ -157,6 +157,10 @@
 
 	<main>
 		<!-- <h2 slot="project-name">Projects</h2> -->
+
+		<!-- <project-card project-name="foo" project-path="foo/">
+			test project
+		</project-card> -->
 
 		<project-card project-name="Turtle" project-path="turtle/">
 			<!--
@@ -327,7 +331,6 @@
 		<project-card project-name="silverdata-js" project-path="silver-language/silverdata-js/">
 			<!-- try to load the project json -->
 		</project-card>
-
 
 	</main>
 

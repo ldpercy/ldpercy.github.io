@@ -121,11 +121,16 @@ export class ProjectCard extends HTMLElement {
 		//console.log('projectDataPath',projectDataPath);
 
 		/** @type ProjectData*/
-		const projectData = (await import(projectDataPath)).default;
-
-		console.log(`${this.projectName} data:`, projectData);
-		this.populateCard(projectData);
-	}
+		try {
+			const projectData = (await import(projectDataPath)).default;
+			console.debug(`${this.projectName} data:`, projectData);
+			this.populateCard(projectData);
+		}
+		catch (error){
+			console.warn(`Project unavailable: ${projectDataPath}`);
+			console.log(error);
+		}
+	}/* connectedCallback */
 
 	disconnectedCallback() {
 		//console.log('Custom element removed from page.');

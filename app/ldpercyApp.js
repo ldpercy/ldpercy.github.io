@@ -36,7 +36,7 @@ class LdpercyApp extends HTMLApp {
 
 	documentDOMContentLoaded() {
 
-		console.log('documentDOMContentLoaded');
+		//console.log('documentDOMContentLoaded');
 		//new URL(window.location.href)
 
 		super.documentDOMContentLoaded();

@@ -6,7 +6,8 @@
 
 
 	<defs>
-		<filter id="cracked-lava" style="color-interpolation-filters:sRGB;"  x="-0.019" y="-0.21" width="2" height="1.4">
+
+		<filter id="cracked-lava" style="color-interpolation-filters:sRGB;" x="-0.019" y="-0.21" width="2" height="1.4">
 			<feGaussianBlur result="result0" in="SourceGraphic" stdDeviation="0.5" id="feGaussianBlur477" />
 			<feTurbulence baseFrequency="0.042" seed="488" numOctaves="7" result="result1" id="feTurbulence477" />
 			<feDisplacementMap result="result5" xChannelSelector="R" scale="0" in2="result1" in="result1"
@@ -34,78 +35,30 @@
 		</filter>
 
 
-		<filter id="snow-crest"
-			style="color-interpolation-filters:sRGB;"
-
-			x="-0.0045"
-			y="-0.056"
-			width="2"
-			height="1.1">
-			<feConvolveMatrix
-				order="3 3"
-				kernelMatrix="1 1 1 0 0 0 -1 -1 -1"
-				preserveAlpha="false"
-				divisor="4"
+		<filter id="snow-crest" style="color-interpolation-filters:sRGB;" x="-0.0045" y="-0.056" width="2" height="1.1">
+			<feConvolveMatrix order="3 3" kernelMatrix="1 1 1 0 0 0 -1 -1 -1" preserveAlpha="false" divisor="4"
 				id="feConvolveMatrix475" />
-			<feMorphology
-				operator="dilate"
-				radius="1 1"
-				id="feMorphology475" />
-			<feGaussianBlur
-				stdDeviation="0.7"
-				result="result0"
-				id="feGaussianBlur475" />
-			<feColorMatrix
-				values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10 0"
-				result="result1"
-				id="feColorMatrix475" />
-			<feOffset
-				dx="0"
-				dy="1"
-				result="result5"
-				id="feOffset475" />
-			<feDiffuseLighting
-				in="result0"
-				diffuseConstant="2"
-				surfaceScale="1"
-				id="feDiffuseLighting475">
-			 <feDistantLight
-				 azimuth="225"
-				 elevation="32"
-				 id="feDistantLight475" />
+			<feMorphology operator="dilate" radius="1 1" id="feMorphology475" />
+			<feGaussianBlur stdDeviation="0.7" result="result0" id="feGaussianBlur475" />
+			<feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10 0" result="result1" id="feColorMatrix475" />
+			<feOffset dx="0" dy="1" result="result5" id="feOffset475" />
+			<feDiffuseLighting in="result0" diffuseConstant="2" surfaceScale="1" id="feDiffuseLighting475">
+				<feDistantLight azimuth="225" elevation="32" id="feDistantLight475" />
 			</feDiffuseLighting>
-			<feComposite
-				in2="result1"
-				operator="in"
-				result="result2"
-				id="feComposite475" />
-			<feColorMatrix
-				values="0.4 0 0 0 0.6 0 0.4 0 0 0.6 0 0 0 0 1 0 0 0 1 0"
-				result="result4"
+			<feComposite in2="result1" operator="in" result="result2" id="feComposite475" />
+			<feColorMatrix values="0.4 0 0 0 0.6 0 0.4 0 0 0.6 0 0 0 0 1 0 0 0 1 0" result="result4"
 				id="feColorMatrix476" />
-			<feComposite
-				in2="result5"
-				in="result4"
-				id="feComposite476" />
-			<feComposite
-				in2="SourceGraphic"
-				id="feComposite477" />
+			<feComposite in2="result5" in="result4" id="feComposite476" />
+			<feComposite in2="SourceGraphic" id="feComposite477" />
 		</filter>
-
 
 	</defs>
 
 
 
-
-
-
 	<g>
-		<text x="0" y="0"
-			style="text-align:center;text-anchor:middle;filter:url(#snow-crest)"
-			>
-			<tspan x="0" y="0"
-				style="font-weight:bold;font-size:100px;font-family:Hack;">
+		<text x="0" y="0" style="text-align:center;text-anchor:middle;filter:url(#snow-crest)">
+			<tspan x="0" y="0" style="font-weight:bold;font-size:100px;font-family:Hack;">
 				ldpercy.github.io
 			</tspan>
 		</text>
