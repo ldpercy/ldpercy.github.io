@@ -1,58 +1,6 @@
 /*
-**	article.css
+**	project-card.css
 */
-
-
-article {
-
-	/* border-width: 16px;
-	border-image-slice: 16;
-
-	border-image-source: url('./list-image.svg');
-	border-image-outset: 8px;
-	border-image-repeat:  space;
-	border-image-width: 16px; */
-
-
-
-	margin: 1em;
-
-
-
-
-	h2 img {
-		height: calc(5 * var(--project-base-length));
-		text-align:center;
-		float:right;
-	}
-
-	.body {
-		display:grid;
-		grid-template-columns: 1fr 1fr;
-
-
-		img {
-			height: calc(20 * var(--project-base-length));
-			text-align: end;
-		}
-	}
-
-
-	.pic-link {
-		filter: drop-shadow(0px 0px 0px var(--accent-colour));	/* chrome seems to need this? */
-		&:hover {
-			filter: drop-shadow(0px 0px var(--project-base-length) var(--accent-colour));
-			/* outline: 1px solid var(--accent-colour); */
-		}
-	}
-
-	.image {
-		text-align: center;
-	}
-
-
-}
-
 
 
 
@@ -80,7 +28,8 @@ project-card {
 		vertical-align: middle;
 		img {
 			height: calc(20 * var(--project-base-length));
-			filter: drop-shadow(0px 0px 0px var(--accent-colour));	/* chrome seems to need this? */
+
+			/* filter: drop-shadow(0px 0px 0px var(--accent-colour)); */	/* chrome seems to need this? */
 			&:hover {
 				filter: drop-shadow(0px 0px var(--project-base-length) var(--accent-colour));
 				/* outline: 1px solid var(--accent-colour); */

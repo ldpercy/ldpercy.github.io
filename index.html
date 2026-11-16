@@ -81,9 +81,9 @@
 				vertical-align: middle;
 				img {
 					height: calc(20 * var(--project-base-length));
-					filter: drop-shadow(0px 0px 0px var(--accent-colour));	/* chrome seems to need this? */
+					/* filter: drop-shadow(0px 0px 0px var(--accent-colour)); */	/* chrome seems to need this? */
 					&:hover {
-						filter: drop-shadow(0px 0px var(--project-base-length) var(--accent-colour));
+						box-shadow: 0px 0px 1ex var(--accent-colour);
 						/* outline: 1px solid var(--accent-colour); */
 					}
 				}
