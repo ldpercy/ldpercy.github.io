@@ -15,9 +15,6 @@ export class ProjectCard extends HTMLElement {
 	];
 
 
-	/** @type {HTMLInputElement} */ colorInput;
-	/** @type {HTMLInputElement} */ textInput;
-
 
 	constructor() {
 		super();				// Always call super first in constructor
@@ -120,6 +117,10 @@ export class ProjectCard extends HTMLElement {
 		const projectDataPath = `/${this.attributes['project-path'].value}project.js`;
 		//console.log('projectDataPath',projectDataPath);
 
+		//project title & path
+		this.shadowRoot.querySelector('slot[name=project-name]').innerHTML	= this.attributes['project-name'].value;
+		this.shadowRoot.querySelector('.project-title-anchor').setAttribute('href', `/${this.attributes['project-path'].value}` );
+
 		/** @type ProjectData*/
 		try {
 			const projectData = (await import(projectDataPath)).default;
@@ -132,13 +133,16 @@ export class ProjectCard extends HTMLElement {
 		}
 	}/* connectedCallback */
 
+
 	disconnectedCallback() {
 		//console.log('Custom element removed from page.');
 	}
 
+
 	connectedMoveCallback() {
 		//console.log('Custom element moved with moveBefore()');
 	}
+
 
 	adoptedCallback() {
 		//console.log('Custom element moved to new page.');
@@ -149,9 +153,6 @@ export class ProjectCard extends HTMLElement {
 	// 	console.log(
 	// 		`Attribute ${name} has changed from ${oldValue} to ${newValue}.`,
 	// 	);
-	// 	if (name === 'colour') {
-	// 		this.updateColourInputs(newValue);
-	// 	}
 	// }
 
 
@@ -159,10 +160,6 @@ export class ProjectCard extends HTMLElement {
 	populateCard(projectData) {
 		let images = '';
 		let tagHtml = '';
-
-		//project title
-		this.shadowRoot.querySelector('slot[name=project-name]').innerHTML	= this.attributes['project-name'].value;
-		this.shadowRoot.querySelector('.project-title-anchor').setAttribute('href', `/${this.attributes['project-path'].value}` );
 
 		//project icon
 		const iconSrc = `/${this.attributes['project-path'].value}favicon.svg`;
