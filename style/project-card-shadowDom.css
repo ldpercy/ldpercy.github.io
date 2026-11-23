@@ -38,7 +38,8 @@ dl {
 	vertical-align: middle;
 	img {
 		height: calc(20 * var(--project-base-length));
-		/* filter: drop-shadow(0px 0px 0px var(--accent-colour)); */	/* chrome seems to need this? */
+
+		box-shadow: 0px 0px 0px #8880;	/* chrome seems to need this? */
 		&:hover {
 			box-shadow: 0px 0px 1ex var(--accent-colour);
 			/* outline: 1px solid var(--accent-colour); */
@@ -46,8 +47,8 @@ dl {
 	}
 }
 img {
-	transition: all ease-in var(--transition-duration);
-	filter: drop-shadow(0px 0px 0px transparent);	/* chrome seems to need this? */
+	/* transition: all ease-in var(--transition-duration); */
+	filter: drop-shadow(0px 0px 0px #fff0);	/* chrome seems to need this? */
 }
 img:hover {
 
